@@ -97,7 +97,7 @@ const LandingNavbar = ({ compressed }: IProps) => {
                 className={classes.link}
                 {...buttonProps}
               >
-                Submissions
+                Best field practices
               </Button>
               <Button
                 component={Link}
@@ -107,7 +107,7 @@ const LandingNavbar = ({ compressed }: IProps) => {
                 className={classes.link}
                 {...buttonProps}
               >
-                People We Serve
+                Voices from People We Serve
               </Button>
               <Button
                 component={Link}

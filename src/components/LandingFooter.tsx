@@ -22,8 +22,8 @@ const footerLinks = [
     title: "Navigation",
     links: [
       { label: "Home", link: "home" },
-      { label: "Submissions", link: "submissions" },
-      { label: "PeopleWeServe", link: "peopleWeServe" },
+      { label: "Best Field Practices", link: "submissions" },
+      { label: "Voices From People We Serve", link: "peopleWeServe" },
       { label: "Our Partners", link: "partners" },
       { label: "Resources", link: "resources" },
       { label: "Contact", link: "contact" },
