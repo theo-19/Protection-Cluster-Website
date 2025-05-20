@@ -18,7 +18,7 @@ export const submissions = [
   //   summary: "Pictures",
   // },
   {
-    logo: "src/assets/partnersLogos/BAHAR.jpg",
+    logo: "https://bahar.ngo/assets/img/colored_logo.svg",
     title: "BAHAR",
     website: "https://bahar.ngo/",
     reports: "#",
@@ -37,7 +37,7 @@ export const submissions = [
   //   summary: "Pictures",
   // },
   {
-    logo: "src/assets/partnersLogos/E&E.png",
+    logo: "https://ee-sy.org/wp-content/uploads/2024/03/Logo-1-1.webp",
     title: "E&E",
     website: "https://ee-sy.org/",
     reports:
@@ -59,7 +59,7 @@ export const submissions = [
   //   summary: "Pictures",
   // },
   {
-    logo: "src/assets/partnersLogos/IHSAN.png",
+    logo: "https://www.ihsanrd.org/wp-content/uploads/2021/03/IhsanRD-Logo.png",
     title: "IHSAN",
     website: "https://www.ihsanrd.org/",
     reports: "Reports",
@@ -70,7 +70,7 @@ export const submissions = [
       "https://drive.google.com/file/d/1_amUyj_2bkilptIly5mjCZlFhJE61A9w/view?usp=drive_link",
   },
   {
-    logo: "src/assets/partnersLogos/IYD.png",
+    logo: "https://iydrelief.org/wp-content/uploads/2022/09/IYD-LOGO-icon.png",
     title: "IYD",
     website: "https://iydrelief.org/",
     reports:
@@ -83,7 +83,7 @@ export const submissions = [
       "https://drive.google.com/file/d/1RuvUfTvUWNnK7KnD3YdH4S_xRwVrxKIa/view?usp=drive_link",
   },
   {
-    logo: "src/assets/partnersLogos/LDHR.jpeg",
+    logo: "https://www.ldhr.org/wp-content/uploads/sites/226/2019/05/cropped-LDHR-LOGO-Horizontal.png?w=1200",
     title: "LDHR",
     website: "https://www.ldhr.org/",
     reports:
@@ -96,7 +96,7 @@ export const submissions = [
       "https://drive.google.com/file/d/1HCQkzCAnYfMz1qU51qeHqakUGRXfOroC/view?usp=drive_link",
   },
   {
-    logo: "src/assets/partnersLogos/NAS.jpg",
+    logo: "https://i0.wp.com/nas.org.tr/wp-content/uploads/2023/08/Vector-Smart-Object.png?fit=151%2C72&ssl=1",
     title: "NAS",
     website: "https://nas.org.tr/",
     reports:
@@ -109,7 +109,7 @@ export const submissions = [
       "https://drive.google.com/file/d/1b7OTgX2IxlZ7mS0fRZGZnxrkLRamFTnt/view?usp=drive_link",
   },
   {
-    logo: "src/assets/partnersLogos/SEMA.jpeg",
+    logo: "https://www.sema.org/themes/custom/sema/assets/images/SEMA-logo.png",
     title: "SEMA",
     website: "https://www.sema.org/",
     reports:
@@ -122,7 +122,7 @@ export const submissions = [
       "https://drive.google.com/file/d/1zDzNE2bN3oIUSS5_v6-rfCjxk9MOHH-S/view?usp=drive_link",
   },
   {
-    logo: "src/assets/partnersLogos/SHAFAK.png",
+    logo: "https://shafak.org/wp-content/uploads/2021/01/Logo-3.png",
     title: "SHAFAK",
     website: "https://shafak.org/",
     reports:
@@ -144,7 +144,7 @@ export const submissions = [
   //   summary: "Pictures",
   // },
   {
-    logo: "src/assets/partnersLogos/SOP.png",
+    logo: "https://spaceofpeace.org/wp-content/uploads/2024/05/SOP-LOGO-m1-140x140.png",
     title: "SOP",
     website: "https://spaceofpeace.org/",
     reports:
@@ -157,7 +157,7 @@ export const submissions = [
       "https://drive.google.com/file/d/1QOxZRuwoEs3nAaSdqbrSn1w5KMuhD-f8/view?usp=drive_link",
   },
   {
-    logo: "src/assets/partnersLogos/SRD.jpeg",
+    logo: "https://srd.org.tr/wp-content/uploads/2024/11/Site-Logo_1.avif",
     title: "SRD",
     website: "https://srd.org.tr/",
     reports:

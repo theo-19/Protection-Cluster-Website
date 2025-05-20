@@ -61,6 +61,13 @@ function Submission({
           fit="contain"
           alt="Logo"
           radius="sm"
+          style={
+            title === "SRD"
+              ? { backgroundColor: "#003663", borderRadius: "50%" }
+              : title === "SOP"
+              ? { backgroundColor: "darkslategray", borderRadius: "50%" }
+              : undefined
+          }
         />
         <div>
           <Title order={5}>{title}</Title>

@@ -3,8 +3,8 @@ export const supportingPartnersData = [
     id: "1",
     name: "UNHCR",
     role: "Cluster Lead Agency",
-    logo: "src/assets/partnersLogos/UNHCE.svg",
-    website: "https://www.undp.org/turkiye",
+    logo: "https://www.unhcr.org/themes/custom/project/logo.svg",
+    website: "https://www.unhcr.org/",
   },
   {
     id: "2",
