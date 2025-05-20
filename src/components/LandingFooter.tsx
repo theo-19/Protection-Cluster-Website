@@ -14,7 +14,112 @@ import {
   IconBrandLinkedin,
   IconBrandTwitter,
 } from "@tabler/icons-react";
+import { Link } from "react-scroll";
 import { BrandName } from "./index";
+
+const footerLinks = [
+  {
+    title: "Navigation",
+    links: [
+      { label: "Home", link: "home" },
+      { label: "Submissions", link: "submissions" },
+      { label: "PeopleWeServe", link: "peopleWeServe" },
+      { label: "Our Partners", link: "partners" },
+      { label: "Resources", link: "resources" },
+      { label: "Contact", link: "contact" },
+    ],
+  },
+  {
+    title: "Contact",
+    links: [
+      {
+        label: "contact@protectioncluster.org",
+        link: "mailto:contact@protectioncluster.org",
+      },
+    ],
+  },
+];
+
+const LandingFooter = () => {
+  const { classes } = useStyles();
+
+  const groups = footerLinks.map((group) => {
+    const links = group.links.map((link, index) =>
+      link.link.startsWith("mailto") ? (
+        <Text<"a">
+          key={index}
+          className={classes.link}
+          component="a"
+          href={link.link}
+        >
+          {link.label}
+        </Text>
+      ) : (
+        <Text
+          key={index}
+          className={classes.link}
+          component={Link}
+          to={link.link}
+          smooth
+          duration={500}
+        >
+          {link.label}
+        </Text>
+      )
+    );
+
+    return (
+      <div className={classes.wrapper} key={group.title}>
+        <Text className={classes.title}>{group.title}</Text>
+        {links}
+      </div>
+    );
+  });
+
+  return (
+    <footer className={classes.footer}>
+      <Container className={classes.inner} size="lg">
+        <div className={classes.logo} style={{ maxWidth: 250 }}>
+          <Stack align="flex-start">
+            <BrandName block="footer" size={40} />
+            <Text size="sm">
+              The Protection Cluster collaborates with humanitarian partners to
+              protect the rights and well-being of people in crisis, ensuring
+              access to safety, dignity, and essential services through
+              coordination, advocacy, and field support.
+            </Text>
+          </Stack>
+        </div>
+        <div className={classes.groups}>{groups}</div>
+      </Container>
+      <Container className={classes.afterFooter} size="lg">
+        <Text size="sm">
+          © {new Date().getFullYear()} Protection Cluster. All rights reserved.
+        </Text>
+
+        <Group spacing={0} className={classes.social} position="right" noWrap>
+          <ActionIcon size="lg" component="a" href="#" target="_blank">
+            <IconBrandGithub size="20" stroke={2} />
+          </ActionIcon>
+          <ActionIcon size="lg" component="a" href="#" target="_blank">
+            <IconBrandTwitter size="20" stroke={2} />
+          </ActionIcon>
+          <ActionIcon size="lg" component="a" href="#" target="_blank">
+            <IconBrandFacebook size="20" stroke={2} />
+          </ActionIcon>
+          <ActionIcon size="lg" component="a" href="#" target="_blank">
+            <IconBrandInstagram size="20" stroke={2} />
+          </ActionIcon>
+          <ActionIcon size="lg" component="a" href="#" target="_blank">
+            <IconBrandLinkedin size="20" stroke={2} />
+          </ActionIcon>
+        </Group>
+      </Container>
+    </footer>
+  );
+};
+
+export default LandingFooter;
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -93,6 +198,7 @@ const useStyles = createStyles((theme) => ({
 
   link: {
     display: "block",
+    cursor: "pointer",
     color:
       theme.colorScheme === "dark"
         ? theme.colors.dark[1]
@@ -135,81 +241,3 @@ const useStyles = createStyles((theme) => ({
     },
   },
 }));
-
-interface FooterLinksProps {
-  data: {
-    title: string;
-    links: { label: string; link: string }[];
-  }[];
-}
-
-const LandingFooter = ({ data }: FooterLinksProps) => {
-  const { classes } = useStyles();
-
-  const groups = data.map((group) => {
-    const links = group.links.map((link, index) => (
-      <Text<"a">
-        key={index}
-        className={classes.link}
-        component="a"
-        href={link.link}
-        onClick={(event) => event.preventDefault()}
-      >
-        {link.label}
-      </Text>
-    ));
-
-    return (
-      <div className={classes.wrapper} key={group.title}>
-        <Text className={classes.title}>{group.title}</Text>
-        {links}
-      </div>
-    );
-  });
-
-  return (
-    <footer className={classes.footer}>
-      <Container className={classes.inner} size="lg">
-        <div className={classes.logo}>
-          <Stack align="flex-start">
-            <BrandName block="footer" size={40} />
-            <Text size="sm">
-              The Protection Cluster works with humanitarian partners to
-              safeguard the rights and well-being of people affected by conflict
-              and disaster. Through coordination, advocacy, and field-based
-              protection efforts, we support those most at risk—ensuring access
-              to safety, dignity, and essential services across crisis-affected
-              areas.
-            </Text>
-          </Stack>
-        </div>
-        <div className={classes.groups}>{groups}</div>
-      </Container>
-      <Container className={classes.afterFooter} size="lg">
-        <Text size="sm">
-          © {new Date().getFullYear()} Protection Cluster. All rights reserved.
-        </Text>
-
-        <Group spacing={0} className={classes.social} position="right" noWrap>
-          <ActionIcon size="lg" component="a" href="#" target="_blank">
-            <IconBrandGithub size="20" stroke={2} />
-          </ActionIcon>
-          <ActionIcon size="lg" component="a" href="#" target="_blank">
-            <IconBrandTwitter size="20" stroke={2} />
-          </ActionIcon>
-          <ActionIcon size="lg" component="a" href="#" target="_blank">
-            <IconBrandFacebook size="20" stroke={2} />
-          </ActionIcon>
-          <ActionIcon size="lg" component="a" href="#" target="_blank">
-            <IconBrandInstagram size="20" stroke={2} />
-          </ActionIcon>
-          <ActionIcon size="lg" component="a" href="#" target="_blank">
-            <IconBrandLinkedin size="20" stroke={2} />
-          </ActionIcon>
-        </Group>
-      </Container>
-    </footer>
-  );
-};
-
-export default LandingFooter;

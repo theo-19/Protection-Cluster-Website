@@ -1,5 +1,4 @@
 import {
-  Button,
   Center,
   Container,
   createStyles,
@@ -11,7 +10,6 @@ import {
   Title,
 } from "@mantine/core";
 import { IconRocket } from "@tabler/icons-react";
-import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const { classes } = useStyles();
@@ -63,7 +61,7 @@ const HeroSection = () => {
           </Stack>
         </Container>
 
-        <div className={classes.controls}>
+        {/* <div className={classes.controls}>
           <Button
             className={classes.control}
             variant="white"
@@ -84,7 +82,7 @@ const HeroSection = () => {
           >
             Browse Reports & Tools
           </Button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -96,8 +94,7 @@ const useStyles = createStyles((theme) => ({
     position: "relative",
     paddingTop: rem(180),
     paddingBottom: rem(130),
-    backgroundImage:
-      "url(https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80)",
+    backgroundImage: "url(src/assets/slider.JPG)",
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: rem(640),

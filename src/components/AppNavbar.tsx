@@ -27,7 +27,7 @@ import {
   IconStar,
 } from "@tabler/icons-react";
 import { useState } from "react";
-import { AppLinks, BrandName, SearchDrawer } from "./index";
+import { AppLinks } from "./index";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -174,10 +174,7 @@ const AppNavbar = ({ ...others }: IProps) => {
   const [userMenuOpened, setUserMenuOpened] = useState(false);
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
-  const [
-    searchOpened,
-    { toggle: toggleSearchDrawer, close: closeSearchDrawer },
-  ] = useDisclosure(false);
+
   const matchesMobile = useMediaQuery("(max-width: 600px)");
 
   return (
@@ -200,20 +197,7 @@ const AppNavbar = ({ ...others }: IProps) => {
 
           <Group position="apart" sx={{ width: "100%" }}>
             <Group>
-              <BrandName
-                size={24}
-                ml={matchesMobile ? "md" : "xs"}
-                variant="grayscale"
-                block="header"
-              />
-              <AppLinks className={classes.hiddenMobile} />
-            </Group>
-            <Group>
-              <ActionIcon
-                variant="filled"
-                color={theme.white}
-                onClick={toggleSearchDrawer}
-              >
+              <ActionIcon variant="filled" color={theme.white}>
                 <IconSearch size={ICON_SIZE} />
               </ActionIcon>
               <ActionIcon variant="filled" color={theme.white}>
@@ -323,8 +307,6 @@ const AppNavbar = ({ ...others }: IProps) => {
           <AppLinks direction="column" />
         </ScrollArea>
       </Drawer>
-
-      <SearchDrawer opened={searchOpened} onClose={closeSearchDrawer} />
     </Box>
   );
 };

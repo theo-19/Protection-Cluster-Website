@@ -31,6 +31,7 @@
     "@tiptap/pm": "^2.0.3",
     "@tiptap/react": "^2.0.3",
     "@tiptap/starter-kit": "^2.0.3",
+    "@types/react-scroll": "^1.8.10",
     "apexcharts": "^3.40.0",
     "dayjs": "^1.11.7",
     "embla-carousel-react": "7.1.0",
@@ -40,6 +41,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.10.0",
+    "react-scroll": "^1.9.3",
     "yet-another-react-lightbox": "^3.23.1"
   },
   "devDependencies": {

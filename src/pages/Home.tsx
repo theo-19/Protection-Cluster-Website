@@ -1,20 +1,9 @@
-import {
-  Box,
-  BoxProps,
-  Container,
-  Text,
-  TextProps,
-  Title,
-  TitleProps,
-} from "@mantine/core";
+import { Box, BoxProps, Container, TextProps, TitleProps } from "@mantine/core";
 import { Helmet } from "react-helmet";
-import { TitleBadge } from "../components";
-import FeaturesSection from "../sections/Home/Features.tsx";
 import HeroSection from "../sections/Home/Hero.tsx";
-import JoinUsSection from "../sections/Home/JoinUs";
-import StatsSection from "../sections/Home/Stats";
-import TestimonialsSection from "../sections/Home/Testimonials";
-import WaysToFundSection from "../sections/Home/WaysToFund";
+import PeopleWeServe from "../sections/Home/PeopleWeServer.tsx";
+import SubmissionsSection from "../sections/Home/Submission.tsx";
+import SupportingPartners from "../sections/Home/SupportingParnters.tsx";
 
 const HomePage = (): JSX.Element => {
   const boxProps: BoxProps = {
@@ -43,43 +32,25 @@ const HomePage = (): JSX.Element => {
       <Helmet>
         <title>Home</title>
       </Helmet>
-      <Box>
+      <Box id="home">
         <HeroSection />
         <Container>
           <Box {...boxProps}>
-            <TitleBadge title="About us" />
-            <Title {...titleProps}>Stronger Together for Protection</Title>
-            <Text {...subTitleProps}>
-              Because together, we can make a real difference. Our volunteers
-              service in a variety of roles according to their skills and
-              interests.
-            </Text>
+            <SubmissionsSection
+              boxProps={boxProps}
+              titleProps={titleProps}
+              subtitleProps={subTitleProps}
+            />
           </Box>
-          <FeaturesSection boxProps={boxProps} subtitleProps={subTitleProps} />
-          <StatsSection
-            boxProps={boxProps}
-            titleProps={titleProps}
-            subtitleProps={subTitleProps}
-          />
-          <JoinUsSection
+          <PeopleWeServe
             boxProps={boxProps}
             titleProps={titleProps}
             subtitleProps={subTitleProps}
           />
         </Container>
-        <WaysToFundSection
-          boxProps={boxProps}
-          titleProps={titleProps}
-          subtitleProps={subTitleProps}
-        />
+
         <Container>
-          <TestimonialsSection boxProps={boxProps} titleProps={titleProps} />
-          {/* <CampaignsSection
-            boxProps={boxProps}
-            titleProps={titleProps}
-            subtitleProps={subTitleProps}
-          /> */}
-          {/* <GetStartedSection boxProps={boxProps} titleProps={titleProps} /> */}
+          <SupportingPartners boxProps={boxProps} />
         </Container>
       </Box>
     </>
