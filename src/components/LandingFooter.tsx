@@ -69,7 +69,7 @@ const LandingFooter = () => {
     );
 
     return (
-      <div className={classes.wrapper} key={group.title}>
+      <div className={classes.wrapper} key={group.title} id="contact">
         <Text className={classes.title}>{group.title}</Text>
         {links}
       </div>

@@ -72,7 +72,7 @@ const LandingNavbar = ({ compressed }: IProps) => {
       >
         <Container size="lg" fluid={compressed} sx={{ height: "100%" }}>
           <Flex justify="space-between" align="center" sx={{ height: "100%" }}>
-            <BrandName size={28} block="header" />
+            <BrandName block="header" />
             <Flex
               align="center"
               gap="xs"

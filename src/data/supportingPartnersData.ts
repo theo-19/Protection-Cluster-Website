@@ -1,30 +1,31 @@
 export const supportingPartnersData = [
   {
     id: "1",
-    name: "UNHCR",
-    role: "Cluster Lead Agency",
-    logo: "https://www.unhcr.org/themes/custom/project/logo.svg",
-    website: "https://www.unhcr.org/",
+    name: "BAHAR ORANIZATION",
+    role: "Field Partner",
+    logo: "https://i.imgur.com/qWkc7RL.jpg",
+    website: "https://www.bahar.ngo",
   },
   {
     id: "2",
-    name: "BAHAR ORANIZATION",
+    name: "Ihsan",
     role: "Field Partner",
-    logo: "https://bahar.ngo/assets/img/colored_logo.svg",
-    website: "https://www.bahar.ngo",
+    logo: "https://i.imgur.com/9tnCIwR.png",
+    website: "https://www.ihsanrd.org/",
   },
+
   {
     id: "3",
     name: "IYD",
     role: "Field Partner",
-    logo: "https://iydrelief.org/wp-content/uploads/2022/09/IYD-LOGO-icon.png",
+    logo: "https://i.imgur.com/bEIBChu.png",
     website: "https://iydrelief.org/",
   },
   {
     id: "4",
     name: "Shafak",
     role: "Field Partner",
-    logo: "https://shafak.org/wp-content/uploads/2021/01/Logo-3.png",
+    logo: "https://i.imgur.com/ltxpMWj.png",
     website: "https://shafak.org/",
   },
 ];

@@ -4,17 +4,17 @@ import lightLogo from "../assets/img/light-logo.png";
 
 interface IProps extends TitleProps {
   block: "header" | "footer";
+  compressed?: boolean;
 }
 
 const Brand = (props: IProps) => {
-  const { block = "header" } = props;
+  const { block } = props;
   return (
     <UnstyledButton component={Link} to="/">
       <Image
         src={lightLogo}
-        style={
-          block === "header" ? { width: "45%", height: "auto" } : undefined
-        }
+        style={{ marginTop: 6 }}
+        width={block === "header" ? "5rem" : "90%"}
       />
     </UnstyledButton>
   );
