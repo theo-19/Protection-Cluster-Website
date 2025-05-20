@@ -7,7 +7,7 @@ import {
   TitleProps,
 } from "@mantine/core";
 import SupportingPartnerCard from "../../components/SupportingPartnerCard";
-import { supportingPartners } from "../../data/SupportingPartners";
+import { supportingPartnersData } from "../../data/supportingPartnersData";
 
 interface IProps {
   boxProps: BoxProps;
@@ -26,7 +26,7 @@ const SupportingPartners = ({ boxProps, titleProps }: IProps) => {
         spacing="md"
         breakpoints={[{ maxWidth: "md", cols: 1 }]}
       >
-        {supportingPartners.map((partner) => (
+        {supportingPartnersData.map((partner) => (
           <SupportingPartnerCard data={partner} key={partner.id} />
         ))}
       </SimpleGrid>

@@ -1,4 +1,4 @@
-export const supportingPartners = [
+export const supportingPartnersData = [
   {
     id: "1",
     name: "UNHCR",
