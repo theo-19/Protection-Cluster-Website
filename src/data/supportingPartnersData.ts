@@ -3,29 +3,28 @@ export const supportingPartnersData = [
     id: "1",
     name: "BAHAR ORANIZATION",
     role: "Field Partner",
-    logo: "https://i.imgur.com/qWkc7RL.jpg",
+    logo: "https://i.imgur.com/lugwkv5.jpg",
     website: "https://www.bahar.ngo",
   },
   {
     id: "2",
-    name: "Ihsan",
-    role: "Field Partner",
-    logo: "https://i.imgur.com/9tnCIwR.png",
-    website: "https://www.ihsanrd.org/",
-  },
-
-  {
-    id: "3",
     name: "IYD",
     role: "Field Partner",
     logo: "https://i.imgur.com/bEIBChu.png",
     website: "https://iydrelief.org/",
   },
   {
-    id: "4",
+    id: "3",
     name: "Shafak",
     role: "Field Partner",
     logo: "https://i.imgur.com/ltxpMWj.png",
     website: "https://shafak.org/",
+  },
+  {
+    id: "4",
+    name: "Ihsan",
+    role: "Field Partner",
+    logo: "https://i.imgur.com/9tnCIwR.png",
+    website: "https://www.ihsanrd.org/",
   },
 ];

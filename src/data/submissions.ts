@@ -8,25 +8,33 @@ export const submissions = [
   //   communication: "Communication Pieces",
   //   summary: "Pictures",
   // },
-  // {
-  //   logo: "src/assets/partnersLogos/ATAA.jpg",
-  //   title: "ATAA",
-  //   website: "www.partner-website.org",
-  //   reports: "Reports",
-  //   trainings: "Training Materials",
-  //   communication: "Communication Pieces",
-  //   summary: "Pictures",
-  // },
   {
-    logo: "https://i.imgur.com/qWkc7RL.jpg",
+    logo: "https://i.imgur.com/lugwkv5.jpg",
     title: "BAHAR",
     website: "https://bahar.ngo/",
-    reports: "#",
-    trainings: "Training Materials",
-    communication: "Communication Pieces",
+    reports:
+      "https://drive.google.com/file/d/1XRyhkvwsbWbMlw4nXlSZxGBD6sl-bKvv/view?usp=drive_link",
+    trainings:
+      "https://drive.google.com/file/d/1XRyhkvwsbWbMlw4nXlSZxGBD6sl-bKvv/view?usp=drive_link",
+    communication:
+      "https://drive.google.com/file/d/1XRyhkvwsbWbMlw4nXlSZxGBD6sl-bKvv/view?usp=drive_link",
     summary:
       "https://drive.google.com/file/d/1XRyhkvwsbWbMlw4nXlSZxGBD6sl-bKvv/view?usp=drive_link",
   },
+  {
+    logo: "https://i.imgur.com/ib9ykM8.jpg",
+    title: "ATAA",
+    website: "www.partner-website.org",
+    reports:
+      "https://drive.google.com/file/d/1uknLGOfS3aQnV6PzanofW6XpISboDVHp/view?usp=drive_link",
+    trainings:
+      "https://drive.google.com/file/d/18l7RhhR9rAvptm8OkK5FSXjeJaFEPWRS/view?usp=drive_link",
+    communication:
+      "https://drive.google.com/file/d/1KjViWMYAcToTWRj559yRqozCdKHvz2hx/view?usp=drive_link",
+    summary:
+      "https://drive.google.com/file/d/1-mnRk34tPEdIVE0A-b0jWE16vlzbbjwz/view?usp=drive_link",
+  },
+
   // {
   //   logo: "src/assets/partnersLogos/BINAA.jpg",
   //   title: "BINAA",
@@ -49,15 +57,19 @@ export const submissions = [
     summary:
       "https://drive.google.com/file/d/1ZfnqDgu3Nzsx8iEomPl56tu5Ln3HxLGj/view?usp=drive_link",
   },
-  // {
-  //   logo: "src/assets/partnersLogos/HIHFAD.png",
-  //   title: "HIHFAD",
-  //   website: "www.partner-website.org",
-  //   reports: "Reports",
-  //   trainings: "Training Materials",
-  //   communication: "Communication Pieces",
-  //   summary: "Pictures",
-  // },
+  {
+    logo: "https://i.imgur.com/Yjc89MS.png",
+    title: "HIHFAD",
+    website: "www.partner-website.org",
+    reports:
+      "https://drive.google.com/file/d/1w40H36dkITiQMvDL3avyopEGaO_0c-JU/view?usp=drive_link",
+    trainings:
+      "https://drive.google.com/file/d/1ML2o3TSaeQv3YLcxGb14D_wCKuyFBzY_/view?usp=drive_link",
+    communication:
+      "https://docs.google.com/document/d/11F_H8gb-bAzfXZ1ai1N2rSdK5fjLYlSk/edit?usp=drive_link&ouid=108569260090502725033&rtpof=true&sd=true",
+    summary:
+      "https://drive.google.com/file/d/1zuNsJ-_YTeoJYr7YuuYiuILt5PGvgoAj/view?usp=drive_link",
+  },
   {
     logo: "https://i.imgur.com/9tnCIwR.png",
     title: "IHSAN",
@@ -134,15 +146,19 @@ export const submissions = [
     summary:
       "https://drive.google.com/file/d/1t1VqcCjpUbpzZVb0qcMNPqAshWlAviTZ/view?usp=drive_link",
   },
-  // {
-  //   logo: "src/assets/partnersLogos/SHF.png",
-  //   title: "SHF",
-  //   website: "www.partner-website.org",
-  //   reports: "Reports",
-  //   trainings: "Training Materials",
-  //   communication: "Communication Pieces",
-  //   summary: "Pictures",
-  // },
+  {
+    logo: "https://i.imgur.com/KJYek68.png",
+    title: "SHF",
+    website: "www.partner-website.org",
+    reports:
+      "https://docs.google.com/document/d/1h1KstuS1949r1m0vZ4wHJMjyzjnUllYW/edit?usp=drive_link&ouid=108569260090502725033&rtpof=true&sd=true",
+    trainings:
+      "https://docs.google.com/document/d/13EUdH94Plbq1A_SZl_X4wgzS-tvrPwXz/edit?usp=drive_link&ouid=108569260090502725033&rtpof=true&sd=true",
+    communication:
+      "https://drive.google.com/file/d/1HXA3_6nfy6vqRMUzkh6FvHgY8EZCjI6T/view?usp=drive_link",
+    summary:
+      "https://drive.google.com/file/d/1TtyFywAoBGYgL1p8GJQ99wXA7w5dMP8s/view?usp=drive_link",
+  },
   {
     logo: "https://i.imgur.com/fooJlmx.png",
     title: "SOP",

@@ -6,7 +6,6 @@ import LandingFooter from "./LandingFooter";
 import LandingNavbar from "./LandingNavbar.tsx";
 import NotFound from "./NotFound";
 import SupportingPartnerCard from "./SupportingPartnerCard";
-import TestimonialsCard from "./SupportingPartnerCard.tsx";
 import TitleBadge from "./TitleBadge";
 
 export {
@@ -18,6 +17,5 @@ export {
   LandingNavbar,
   NotFound,
   SupportingPartnerCard,
-  TestimonialsCard,
   TitleBadge,
 };

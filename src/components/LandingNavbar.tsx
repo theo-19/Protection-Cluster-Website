@@ -1,148 +1,157 @@
 import {
   Box,
-  BoxProps,
+  Burger,
   Button,
   ButtonProps,
   Container,
   createStyles,
+  Drawer,
   Flex,
-  getStylesRef,
   Header,
   rem,
 } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+import lightLogo from "../assets/img/light-logo.png";
+import NWS_CP_Logo from "../assets/img/NWS_CP_Logo.png";
+import NWS_GBV_Logo from "../assets/img/NWS_GBV_Logo.png";
+import NWS_HLP_Logo from "../assets/img/NWS_HLP_Logo.png";
+
 import { BrandName } from "./index";
 
-interface IProps extends BoxProps {
-  compressed?: boolean;
-}
+const HEADER_HEIGHT = 60;
 
-const LandingNavbar = ({ compressed }: IProps) => {
-  const { classes, theme } = useStyles();
+const navLinks = [
+  { to: "home", label: "Home" },
+  { to: "submissions", label: "Best field practices" },
+  { to: "peopleWeServe", label: "Voices from People We Serve" },
+  { to: "partners", label: "Our Partners" },
+  { to: "resources", label: "Resources" },
+  { to: "contact", label: "Contact" },
+];
+
+const LandingNavbar = () => {
+  const { classes } = useStyles();
   const [stickyClass, setStickyClass] = useState(false);
   const matchesMobile = useMediaQuery("(max-width: 768px)");
+  const [drawerOpened, { open, close }] = useDisclosure(false);
 
   const buttonProps: ButtonProps = {
     variant: "subtle",
     radius: matchesMobile ? "sm" : 0,
-  };
-
-  const stickNavbar = () => {
-    if (window !== undefined) {
-      const windowHeight = window.scrollY;
-      windowHeight > 240 ? setStickyClass(true) : setStickyClass(false);
-    }
+    fullWidth: matchesMobile,
+    size: "md",
+    style: { justifyContent: "flex-start" },
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", stickNavbar);
-
-    return () => {
-      window.removeEventListener("scroll", stickNavbar);
+    const stickNavbar = () => {
+      setStickyClass(window.scrollY > 240);
     };
+    window.addEventListener("scroll", stickNavbar);
+    return () => window.removeEventListener("scroll", stickNavbar);
   }, []);
 
   return (
     <Box
-      mt={compressed ? (stickyClass ? 0 : "xl") : 0}
       sx={{
-        transition: "all ease 150ms",
         position: "fixed",
-        top: "3%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        zIndex: 2,
-        margin: "auto",
-        width: compressed ? (stickyClass ? "100%" : "85%") : "100%",
-        boxShadow: theme.shadows.sm,
+        top: 0,
+        left: 0,
+        width: "100vw",
+        zIndex: 100,
+        transition: "all 150ms ease",
+        boxShadow: stickyClass ? "0 2px 12px rgba(0,0,0,0.07)" : undefined,
+        background: "transparent",
       }}
     >
       <Header
-        height={60}
-        px="md"
-        sx={{
-          backgroundColor: stickyClass
-            ? "rgba( 255, 255, 255, .9 )"
-            : theme.white,
-          backdropFilter: "blur(4px)",
-          borderRadius: stickyClass ? 0 : theme.radius.sm,
-        }}
+        height={HEADER_HEIGHT}
+        className={classes.header}
+        style={{ marginLeft: 0, marginRight: 0 }}
       >
-        <Container size="lg" fluid={compressed} sx={{ height: "100%" }}>
-          <Flex justify="space-between" align="center" sx={{ height: "100%" }}>
-            <BrandName block="header" />
-            <Flex
-              align="center"
-              gap="xs"
-              sx={{ height: "100%" }}
-              className={classes.hiddenMobile}
-            >
-              <Button
-                component={Link}
-                to="home"
-                smooth
-                duration={500}
-                className={classes.link}
-                {...buttonProps}
-              >
-                Home
-              </Button>
-              <Button
-                component={Link}
-                to="submissions"
-                smooth
-                duration={500}
-                className={classes.link}
-                {...buttonProps}
-              >
-                Best field practices
-              </Button>
-              <Button
-                component={Link}
-                to="peopleWeServe"
-                smooth
-                duration={500}
-                className={classes.link}
-                {...buttonProps}
-              >
-                Voices from People We Serve
-              </Button>
-              <Button
-                component={Link}
-                to="partners"
-                smooth
-                duration={500}
-                className={classes.link}
-                {...buttonProps}
-              >
-                Our Partners
-              </Button>
-              <Button
-                component={Link}
-                to="resources"
-                smooth
-                duration={500}
-                className={classes.link}
-                {...buttonProps}
-              >
-                Resources
-              </Button>
-              <Button
-                component={Link}
-                to="contact"
-                smooth
-                duration={500}
-                className={classes.link}
-                {...buttonProps}
-              >
-                Contact
-              </Button>
+        <Container
+          size="lg"
+          fluid
+          style={{
+            height: "100%",
+            width: "100%",
+            marginInlineStart: 32,
+            marginInlineEnd: 32,
+          }}
+        >
+          <Flex
+            justify="space-between"
+            align="center"
+            style={{ height: "100%" }}
+          >
+            <Flex className={classes.logosWrapper}>
+              <BrandName block="header" src={lightLogo} />
+              {!matchesMobile && (
+                <>
+                  <BrandName block="header" src={NWS_CP_Logo} />
+                  <BrandName block="header" src={NWS_GBV_Logo} />
+                  <BrandName block="header" src={NWS_HLP_Logo} />
+                </>
+              )}
             </Flex>
+
+            <Flex align="center" gap="xs" className={classes.hiddenMobile}>
+              {navLinks.map((item) => (
+                <Button
+                  key={item.to}
+                  component={Link}
+                  to={item.to}
+                  smooth
+                  duration={500}
+                  className={classes.link}
+                  {...buttonProps}
+                  fullWidth={false}
+                >
+                  {item.label}
+                </Button>
+              ))}
+            </Flex>
+
+            <Burger
+              opened={drawerOpened}
+              onClick={open}
+              className={classes.menuButton}
+              size="md"
+              aria-label="Open navigation"
+            />
           </Flex>
         </Container>
       </Header>
+
+      <Drawer
+        opened={drawerOpened}
+        onClose={close}
+        padding="md"
+        size="80vw"
+        title={<BrandName block="header" src={lightLogo} />}
+        styles={{
+          title: { paddingLeft: 0 },
+        }}
+      >
+        <Flex direction="column" gap="sm">
+          {navLinks.map((item) => (
+            <Button
+              key={item.to}
+              component={Link}
+              to={item.to}
+              smooth
+              duration={500}
+              className={classes.link}
+              {...buttonProps}
+              onClick={close}
+            >
+              {item.label}
+            </Button>
+          ))}
+        </Flex>
+      </Drawer>
     </Box>
   );
 };
@@ -160,27 +169,57 @@ const useStyles = createStyles((theme) => ({
     color: theme.colorScheme === "dark" ? theme.white : theme.black,
     fontWeight: 500,
     fontSize: theme.fontSizes.sm,
-
-    [theme.fn.smallerThan("md")]: {
-      height: rem(42),
-      display: "flex",
-      alignItems: "center",
-      width: "100%",
-    },
+    transition: "color 0.15s",
 
     "&:hover": {
       textDecoration: "underline",
       fontWeight: 600,
-
-      [`& .${getStylesRef("icon")}`]: {
-        color: theme.colorScheme === "dark" ? theme.black : theme.white,
-      },
+    },
+    [theme.fn.smallerThan("md")]: {
+      height: rem(42),
+      width: "100%",
+      justifyContent: "flex-start",
     },
   },
-
   hiddenMobile: {
     [theme.fn.smallerThan("md")]: {
+      display: "none !important",
+    },
+  },
+  logosWrapper: {
+    gap: theme.spacing.sm,
+    alignItems: "center",
+    [theme.fn.smallerThan("md")]: {
+      gap: 0,
+    },
+  },
+  hiddenDesktop: {
+    display: "none",
+    [theme.fn.smallerThan("md")]: {
+      display: "block",
+    },
+  },
+  header: {
+    backgroundColor: "rgba(255,255,255,0.95)",
+    backdropFilter: "blur(4px)",
+    borderRadius: theme.radius.sm,
+    boxShadow: theme.shadows.sm,
+    transition: "all 150ms ease",
+    height: rem(HEADER_HEIGHT),
+    alignItems: "center",
+    padding: `0 ${theme.spacing.lg}px`,
+    [theme.fn.smallerThan("md")]: {
+      borderRadius: 0,
+      padding: `0 ${theme.spacing.md}px`,
+    },
+    width: "100%",
+    display: "flex",
+    justifyContent: "space-between",
+  },
+  menuButton: {
+    [theme.fn.largerThan("md")]: {
       display: "none",
     },
+    marginLeft: theme.spacing.md,
   },
 }));

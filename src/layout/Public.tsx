@@ -11,13 +11,13 @@ interface IProps {
 
 const PublicLayout = ({ compressedNav }: IProps) => {
   return (
-    <>
-      <LandingNavbar compressed={compressedNav} />
+    <div style={{ width: "100%" }}>
+      <LandingNavbar />
       <Box sx={{ marginTop: compressedNav ? 0 : 96 }}>
         <Outlet />
       </Box>
       <LandingFooter />
-    </>
+    </div>
   );
 };
 

@@ -127,6 +127,7 @@ const SubmissionsSection = ({
 }: IProps) => {
   const [searchValue, setSearchValue] = useState("");
   const [filteredPartners, setFilteredPartners] = useState(submissions);
+  const { classes } = useStyles();
   const onSearch = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.toLowerCase();
     setSearchValue(value);
@@ -140,7 +141,7 @@ const SubmissionsSection = ({
     <Submission {...item} key={item.title} />
   ));
   return (
-    <Box {...boxProps} id="submissions">
+    <Box {...boxProps} id="submissions" style={{ marginBottom: "1.5rem" }}>
       <Box mb="lg">
         <TitleBadge title="Voices from Our Partners" />
         <Title {...titleProps}> Our Partners Submissions</Title>
@@ -151,12 +152,14 @@ const SubmissionsSection = ({
         </Text>
       </Box>
       <Group position="apart" mb="xl">
-        <Group spacing={4}>
+        <Group spacing={4} className={classes.searchContainer}>
           <Input
             onChange={onSearch}
             value={searchValue}
             placeholder="Search by organization"
             size="sm"
+            width={"100%"}
+            className={classes.searchContainer}
           />
         </Group>
       </Group>
@@ -180,4 +183,5 @@ const useStyles = createStyles((theme) => ({
     border: `1px solid ${theme.colors.gray[3]}`,
     borderRadius: theme.radius.md,
   },
+  searchContainer: { width: "100% !important" },
 }));

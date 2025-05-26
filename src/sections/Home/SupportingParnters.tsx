@@ -1,37 +1,38 @@
-import {
-  Box,
-  BoxProps,
-  SimpleGrid,
-  TextProps,
-  Title,
-  TitleProps,
-} from "@mantine/core";
-import SupportingPartnerCard from "../../components/SupportingPartnerCard";
+import { Box, BoxProps, Group, Image, Title, TitleProps } from "@mantine/core";
 import { supportingPartnersData } from "../../data/supportingPartnersData";
 
 interface IProps {
-  boxProps: BoxProps;
+  boxProps?: BoxProps;
   titleProps?: TitleProps;
-  subtitleProps?: TextProps;
 }
 
-const SupportingPartners = ({ boxProps, titleProps }: IProps) => {
+const SupportingPartnerLogos = ({ boxProps, titleProps }: IProps) => {
   return (
-    <Box {...boxProps} id="partners">
-      <Title {...titleProps} align="center" mb="md">
+    <Box {...boxProps} id="partnerLogos">
+      <Title
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: 20,
+        }}
+        {...titleProps}
+      >
         Our Supporting Partners
       </Title>
-      <SimpleGrid
-        cols={2}
-        spacing="md"
-        breakpoints={[{ maxWidth: "md", cols: 1 }]}
-      >
+      <Group position="center" spacing="xl">
         {supportingPartnersData.map((partner) => (
-          <SupportingPartnerCard data={partner} key={partner.id} />
+          <Image
+            key={partner.id}
+            src={partner.logo}
+            alt={partner.name}
+            width={100}
+            height={100}
+            fit="contain"
+          />
         ))}
-      </SimpleGrid>
+      </Group>
     </Box>
   );
 };
 
-export default SupportingPartners;
+export default SupportingPartnerLogos;

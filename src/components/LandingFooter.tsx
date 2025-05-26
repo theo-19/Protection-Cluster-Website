@@ -1,20 +1,16 @@
 import {
-  ActionIcon,
+  Anchor,
   Container,
   createStyles,
-  Group,
   rem,
   Stack,
   Text,
 } from "@mantine/core";
-import {
-  IconBrandFacebook,
-  IconBrandGithub,
-  IconBrandInstagram,
-  IconBrandLinkedin,
-  IconBrandTwitter,
-} from "@tabler/icons-react";
 import { Link } from "react-scroll";
+import lightLogo from "../assets/img/light-logo.png";
+import NWS_CP_Logo from "../assets/img/NWS_CP_Logo.png";
+import NWS_GBV_Logo from "../assets/img/NWS_GBV_Logo.png";
+import NWS_HLP_Logo from "../assets/img/NWS_HLP_Logo.png";
 import { BrandName } from "./index";
 
 const footerLinks = [
@@ -81,7 +77,12 @@ const LandingFooter = () => {
       <Container className={classes.inner} size="lg">
         <div className={classes.logo} style={{ maxWidth: 250 }}>
           <Stack align="flex-start">
-            <BrandName block="footer" size={40} />
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <BrandName block="footer" src={lightLogo} />
+              <BrandName block="footer" src={NWS_HLP_Logo} />
+              <BrandName block="footer" src={NWS_GBV_Logo} />
+              <BrandName block="footer" src={NWS_CP_Logo} />
+            </div>
             <Text size="sm">
               The Protection Cluster collaborates with humanitarian partners to
               protect the rights and well-being of people in crisis, ensuring
@@ -94,26 +95,18 @@ const LandingFooter = () => {
       </Container>
       <Container className={classes.afterFooter} size="lg">
         <Text size="sm">
-          © {new Date().getFullYear()} Protection Cluster. All rights reserved.
+          © {new Date().getFullYear()} Designed and developed by{" "}
+          <Anchor
+            href="https://bahar.ngo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            underline
+            style={{ fontWeight: 600, color: "orange" }}
+          >
+            BAHAR NGO
+          </Anchor>{" "}
+          on behalf of NWS Protection Cluster.
         </Text>
-
-        <Group spacing={0} className={classes.social} position="right" noWrap>
-          <ActionIcon size="lg" component="a" href="#" target="_blank">
-            <IconBrandGithub size="20" stroke={2} />
-          </ActionIcon>
-          <ActionIcon size="lg" component="a" href="#" target="_blank">
-            <IconBrandTwitter size="20" stroke={2} />
-          </ActionIcon>
-          <ActionIcon size="lg" component="a" href="#" target="_blank">
-            <IconBrandFacebook size="20" stroke={2} />
-          </ActionIcon>
-          <ActionIcon size="lg" component="a" href="#" target="_blank">
-            <IconBrandInstagram size="20" stroke={2} />
-          </ActionIcon>
-          <ActionIcon size="lg" component="a" href="#" target="_blank">
-            <IconBrandLinkedin size="20" stroke={2} />
-          </ActionIcon>
-        </Group>
       </Container>
     </footer>
   );
@@ -123,6 +116,10 @@ export default LandingFooter;
 
 const useStyles = createStyles((theme) => ({
   footer: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
     marginTop: rem(120),
     paddingTop: `calc(${theme.spacing.xl} * 2)`,
     paddingBottom: `calc(${theme.spacing.xl} * 2)`,
@@ -162,6 +159,8 @@ const useStyles = createStyles((theme) => ({
   inner: {
     display: "flex",
     justifyContent: "space-between",
+    width: "100%",
+    maxWidth: "85%",
 
     [theme.fn.smallerThan("sm")]: {
       flexDirection: "column",
