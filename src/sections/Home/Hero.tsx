@@ -94,7 +94,7 @@ const useStyles = createStyles((theme) => ({
     position: "relative",
     paddingTop: rem(180),
     paddingBottom: rem(130),
-    backgroundImage: "url(src/assets/slider.jpg)",
+    backgroundImage: "url(src/assets/img/slider.jpg)",
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: rem(640),
