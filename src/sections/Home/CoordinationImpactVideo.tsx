@@ -38,7 +38,7 @@ const CoordinationImpactVideo = ({
         </Title>
         <Text {...subtitleProps}>
           This infographic video summarizes how the Protection Cluster
-          successfully coordinated over 150 organizations to address the urgent
+          successfully coordinated over 115 organizations to address the urgent
           needs of communities across Northwest Syria.
         </Text>
       </Box>
