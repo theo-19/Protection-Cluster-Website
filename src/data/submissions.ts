@@ -242,6 +242,6 @@ export const submissions = [
     trainings: "Training Materials",
     communication: "Communication Pieces",
     summary: "Pictures",
-    tag: "Intersectoral response to earthquake related needs",
+    tag: "Intersectoral response to earthquake",
   },
 ];

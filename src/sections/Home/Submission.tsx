@@ -1,5 +1,6 @@
 import {
   Anchor,
+  Badge,
   Box,
   BoxProps,
   Button,
@@ -16,12 +17,7 @@ import {
   Title,
   TitleProps,
 } from "@mantine/core";
-import {
-  IconBook,
-  IconCertificate,
-  IconPhoneCalling,
-  IconPhoto,
-} from "@tabler/icons-react";
+import { IconPhoto } from "@tabler/icons-react";
 import { useCallback, useState } from "react";
 import TitleBadge from "../../components/TitleBadge";
 import { submissions } from "../../data/submissions";
@@ -34,6 +30,7 @@ interface SubmissionProps extends PaperProps {
   trainings?: string;
   communication?: string;
   summary?: string;
+  tag?: string;
 }
 
 function Submission({
@@ -44,6 +41,7 @@ function Submission({
   trainings,
   communication,
   summary,
+  tag,
 }: SubmissionProps) {
   const { classes } = useStyles();
 
@@ -53,32 +51,41 @@ function Submission({
   );
   return (
     <Card className={classes.submission} shadow="sm" radius="md" p="md">
-      <Group position="apart" spacing="md" mb="sm">
-        <Image
-          src={logo}
-          width={88}
-          height={88}
-          fit="contain"
-          alt="Logo"
-          radius="sm"
-        />
-        <div>
-          <Title order={5}>{title}</Title>
-          <Text size="xs">
-            <Anchor href={website} target="_blank" rel="noopener noreferrer">
-              Visit Website
-            </Anchor>
-          </Text>
-        </div>
+      <Group position="apart" spacing="md" mb="sm" align="flex-start">
+        <Group spacing="sm" align="flex-start">
+          <Image
+            src={logo}
+            width={88}
+            height={88}
+            fit="contain"
+            alt="Logo"
+            radius="sm"
+          />
+          <div>
+            <Title order={5}>{title}</Title>
+            <Text size="xs">
+              <Anchor href={website} target="_blank" rel="noopener noreferrer">
+                Visit Website
+              </Anchor>
+            </Text>
+          </div>
+        </Group>
       </Group>
+      <Badge
+        color="orange"
+        variant="filled"
+        size="sm"
+        style={{ marginTop: 4, height: "auto" }}
+      >
+        {tag}
+      </Badge>
       <Divider my="xs" />
 
-      {/* Summary button alone on top */}
       <Button
         leftIcon={<IconPhoto size={14} />}
         size="sm"
         variant="filled"
-        color="blue" // You can change this to match your site's primary color
+        color="blue"
         fullWidth
         mb="xs"
         style={{
@@ -93,29 +100,32 @@ function Submission({
       {/* Other buttons grouped below */}
       <Group grow spacing="xs" mt="xs">
         <Button
-          leftIcon={<IconBook size={14} />}
-          size="xs"
+          // leftIcon={<IconBook size={14} />}
+          size="sm"
           variant="outline"
           color="dark"
           onClick={() => onReportClick(reports)}
+          style={{ fontWeight: 500, fontSize: 12 }}
         >
           Reports
         </Button>
         <Button
-          leftIcon={<IconCertificate size={14} />}
-          size="xs"
+          // leftIcon={<IconCertificate size={14} />}
+          size="sm"
           variant="outline"
           color="dark"
           onClick={() => onReportClick(trainings)}
+          style={{ fontWeight: 500, fontSize: 12 }}
         >
           Trainings
         </Button>
         <Button
-          leftIcon={<IconPhoneCalling size={14} />}
-          size="xs"
+          // leftIcon={<IconPhoneCalling size={14} />}
+          size="sm"
           variant="outline"
           color="dark"
           onClick={() => onReportClick(communication)}
+          style={{ fontWeight: 500, fontSize: 12 }}
         >
           Communication
         </Button>
