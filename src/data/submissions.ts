@@ -1,5 +1,19 @@
 export const submissions = [
   {
+    logo: "https://i.imgur.com/lugwkv5.jpg",
+    title: "BAHAR",
+    website: "https://bahar.ngo/",
+    reports:
+      "https://drive.google.com/drive/folders/1rsx0CataFF7aDKtlUUenblcxgfVGspsI?usp=sharing",
+    trainings:
+      "https://drive.google.com/drive/folders/1ZFFTyveqxMfxbRVTtwMTJnMTHCS8hqKe?usp=drive_link",
+    communication:
+      "https://drive.google.com/drive/folders/1Y96MqCfMt4I92Ico8ObRW2xCPGD5gZhy?usp=sharing",
+    summary:
+      "https://drive.google.com/file/d/1XRyhkvwsbWbMlw4nXlSZxGBD6sl-bKvv/view?usp=drive_link",
+    tag: "social cohesion",
+  },
+  {
     logo: "https://i.imgur.com/JB9SIkH.png",
     title: "E&E",
     website: "https://ee-sy.org/",
@@ -165,20 +179,7 @@ export const submissions = [
       "https://drive.google.com/file/d/1b7OTgX2IxlZ7mS0fRZGZnxrkLRamFTnt/view?usp=drive_link",
     tag: "EORE",
   },
-  {
-    logo: "https://i.imgur.com/lugwkv5.jpg",
-    title: "BAHAR",
-    website: "https://bahar.ngo/",
-    reports:
-      "https://drive.google.com/drive/folders/1rsx0CataFF7aDKtlUUenblcxgfVGspsI?usp=sharing",
-    trainings:
-      "https://drive.google.com/drive/folders/1ZFFTyveqxMfxbRVTtwMTJnMTHCS8hqKe?usp=drive_link",
-    communication:
-      "https://drive.google.com/drive/folders/1Y96MqCfMt4I92Ico8ObRW2xCPGD5gZhy?usp=sharing",
-    summary:
-      "https://drive.google.com/file/d/1XRyhkvwsbWbMlw4nXlSZxGBD6sl-bKvv/view?usp=drive_link",
-    tag: "social cohesion",
-  },
+
   {
     logo: "https://i.imgur.com/KJYek68.png",
     title: "SHF",
