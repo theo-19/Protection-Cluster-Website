@@ -52,7 +52,15 @@ function Submission({
   return (
     <Card className={classes.submission} shadow="sm" radius="md" p="md">
       <Group position="apart" spacing="md" mb="sm" align="flex-start">
-        <Group spacing="sm" align="flex-start">
+        <Group
+          spacing="sm"
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
           <Image
             src={logo}
             width={88}
