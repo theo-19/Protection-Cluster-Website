@@ -1,42 +1,57 @@
 export const FGDs = [
   {
-    title: "Capacity Building Initiative-NWS GBV AOR",
-    link: "https://drive.google.com/file/d/1eiSQS8Vf-0Rcog2IeothZes8uEBAQ8Hz/view?usp=drive_link",
+    title: "HLP AOR",
+    link: "https://drive.google.com/file/d/1XUCwiNS74wr8tz9ZzVCUeMTVNpHp0DPy/view?usp=sharing",
+    logo: "https://i.imgur.com/awvHhcN.jpg",
   },
   {
-    title: "Case Management-NWS CP AoR",
-    link: "https://drive.google.com/file/d/1lOdBgtJ6ulBNcfT11c3th9Z72fidDsWt/view?usp=drive_link",
+    title: "CP AOR",
+    link: "https://drive.google.com/file/d/1WiDDEqn84xdf1rC_An_LvOPIy8VhzYHE/view?usp=sharing",
+    logo: "https://i.imgur.com/KRn3Ysa.jpg",
   },
   {
-    title: "Cluster Coordinators and ICCG-PC",
-    link: "https://drive.google.com/file/d/1-ZKarr17ME58qfFfg-_1BkpQVhHdXjZs/view?usp=drive_link",
+    title: "PC",
+    link: "https://drive.google.com/file/d/1WSBuzMGxVRv-EI-y1Ouv2KSxkWO3siuW/view?usp=sharing",
+    logo: "https://i.imgur.com/CiyvdGU.jpg",
   },
   {
-    title: "Community Leaders- IHSAN RD",
-    link: "https://drive.google.com/file/d/1gDs24zmN7phC9L-O3RBIeLWwBBVtmob-/view?usp=drive_link",
+    title: "PC",
+    link: "https://drive.google.com/file/d/1WSBuzMGxVRv-EI-y1Ouv2KSxkWO3siuW/view?usp=sharing",
+    logo: "https://i.imgur.com/CiyvdGU.jpg",
+  },
+  // {
+  //   title: "Shafak",
+  //   link: "https://drive.google.com/file/d/1WGahaYWPns5pYFEsmmxpRzzcD1Z85bm2/view?usp=sharing",
+  //   logo: "https://i.imgur.com/ltxpMWj.jpg",
+  // },
+  {
+    title: "PC",
+    link: "https://drive.google.com/file/d/1WgT9XTOoTlcbklE6SVTztvPeXxZ0MSsj/view?usp=sharing",
+    logo: "https://i.imgur.com/CiyvdGU.jpg",
   },
   {
-    title: "GBV Case management TF-GBV AOR",
-    link: "https://drive.google.com/file/d/1gJ86EXdEZuOUhYXsoMISmBI-qWR7lWa1/view?usp=drive_link",
+    title: "GBV AOR",
+    link: "https://drive.google.com/file/d/1WrReQqkSjbqHOc2decB6IKjQbw94N7bv/view?usp=sharing",
+    logo: "https://i.imgur.com/0TTHyXR.jpg",
   },
   {
-    title: "Humanitarian Actors- CARE",
-    link: "https://drive.google.com/file/d/16kgr6HdoqQdIa6kN0ijB7y9VBrczKKJU/view?usp=drive_link",
+    title: "GBV AOR",
+    link: "https://drive.google.com/file/d/1WYXSwUM8jZuin7rrbv3j4Pjb-5jXfbp9/view?usp=sharing",
+    logo: "https://i.imgur.com/0TTHyXR.jpg",
+  },
+  // {
+  //   title: "HI",
+  //   link: "https://drive.google.com/file/d/1WM7RmJ3J6cNhkZTJkf8ZdC1f_gA-aVJa/view?usp=sharing",
+  //   logo: "https://www.hi.org/sn_uploads/fck/SYMBOLE_HI.png",
+  // },
+  {
+    title: "CARE",
+    link: "https://drive.google.com/file/d/1WWxZTgbUhM8qTZq8cSJ0AlPDwz9z8nYv/view?usp=sharing",
+    logo: "https://logowik.com/content/uploads/images/care-usa4503.jpg",
   },
   {
-    title: "PMA WG-NWS Protection Cluster",
-    link: "https://drive.google.com/file/d/1b0jre-7AB4fHQ5u5tIBQmHsJzN3V5BRM/view?usp=drive_link",
-  },
-  {
-    title: "PWD-HI",
-    link: "https://drive.google.com/file/d/1OhWKzSvc-D2DwUYMTXe6S3DAm6UDEfg3/view?usp=drive_link",
-  },
-  {
-    title: "Subdistrict Focal Points-NWS PC",
-    link: "https://drive.google.com/file/d/1pTEOguwblf3vpRNo-841aeZlwQ0gNOZq/view?usp=drive_link",
-  },
-  {
-    title: "Volunteers Teams-Shafak",
-    link: "https://drive.google.com/file/d/127kIsgfuZ2ALneowRJupHNRqt8NbeqZp/view?usp=drive_link",
+    title: "IHSAN RD",
+    link: "https://drive.google.com/file/d/1WdG7-aOiHsobRBKQIsMFpU-Nf2t5fevb/view?usp=sharing",
+    logo: "https://i.imgur.com/9tnCIwR.jpg",
   },
 ];

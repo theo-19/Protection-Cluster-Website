@@ -20,11 +20,4 @@ export const supportingPartnersData = [
     logo: "https://i.imgur.com/ltxpMWj.png",
     website: "https://shafak.org/",
   },
-  {
-    id: "4",
-    name: "Ihsan",
-    role: "Field Partner",
-    logo: "https://i.imgur.com/9tnCIwR.png",
-    website: "https://www.ihsanrd.org/",
-  },
 ];

@@ -1,8 +1,10 @@
 import { Box, BoxProps, Container, TextProps, TitleProps } from "@mantine/core";
 import { Helmet } from "react-helmet";
 import CoordinationImpactVideo from "../sections/Home/CoordinationImpactVideo.tsx";
+import { DashboardsList } from "../sections/Home/Dashboards.tsx";
 import HeroSection from "../sections/Home/Hero.tsx";
 import PeopleWeServe from "../sections/Home/PeopleWeServer.tsx";
+import { ReportsList } from "../sections/Home/Reports.tsx";
 import SubmissionsSection from "../sections/Home/Submission.tsx";
 import SupportingPartnerLogos from "../sections/Home/SupportingParnters.tsx";
 
@@ -36,6 +38,14 @@ const HomePage = (): JSX.Element => {
       <Box id="home">
         <HeroSection />
         <Container>
+          <CoordinationImpactVideo
+            videoUrl="https://www.youtube.com/embed/ZVlhADGE1s4"
+            titleProps={titleProps}
+            boxProps={boxProps}
+          />
+          <SupportingPartnerLogos boxProps={boxProps} titleProps={titleProps} />
+        </Container>
+        <Container>
           <Box {...boxProps}>
             <SubmissionsSection
               boxProps={boxProps}
@@ -56,16 +66,10 @@ const HomePage = (): JSX.Element => {
         </Container>
 
         <Container>
-          <CoordinationImpactVideo
-            videoUrl="https://www.youtube.com/embed/ZVlhADGE1s4"
-            titleProps={titleProps}
-            boxProps={boxProps}
-          />
+          <DashboardsList />
+          <ReportsList />
           <SupportingPartnerLogos boxProps={boxProps} titleProps={titleProps} />
         </Container>
-        {/* <Container>
-          <SupportingPartners boxProps={boxProps} />
-        </Container> */}
       </Box>
     </>
   );

@@ -5,12 +5,11 @@ import {
   Card,
   createStyles,
   Divider,
+  Image,
   Input,
   SimpleGrid,
   Text,
-  TextProps,
   Title,
-  TitleProps,
 } from "@mantine/core";
 import { IconBook } from "@tabler/icons-react";
 import { useCallback, useState } from "react";
@@ -23,13 +22,65 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: theme.white,
     border: `1px solid ${theme.colors.gray[3]}`,
     borderRadius: theme.radius.md,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    boxShadow: theme.shadows.xs,
+    padding: `${theme.spacing.lg}px ${theme.spacing.md}px`,
+  },
+  logo: {
+    width: "100%",
+    height: "auto",
+    objectFit: "contain",
+    margin: "0 auto",
+    borderRadius: theme.radius.sm,
+    marginBottom: theme.spacing.sm,
+    marginTop: theme.spacing.sm,
+    background: "#f7f7f7",
+    border: `1px solid ${theme.colors.gray[2]}`,
+    display: "block",
+  },
+  title: {
+    textAlign: "center",
+    fontWeight: 600,
+    marginBottom: theme.spacing.xs,
+    fontSize: theme.fontSizes.lg,
+  },
+  divider: {
+    width: "80%",
+    margin: "0 auto",
+    marginBottom: theme.spacing.md,
+    marginTop: theme.spacing.md,
+  },
+  button: {
+    width: "100%",
+    marginTop: theme.spacing.xs,
+    fontWeight: 500,
+  },
+  iframeWrapper: {
+    width: "100%",
+    position: "relative",
+    paddingTop: "56.25%",
+    marginTop: theme.spacing.md,
+    borderRadius: theme.radius.sm,
+    overflow: "hidden",
+    background: "#f2f2f2",
+  },
+  iframe: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    border: 0,
   },
 }));
 
 interface IProps {
   boxProps: BoxProps;
-  titleProps?: TitleProps;
-  subtitleProps?: TextProps;
+  titleProps?: any;
+  subtitleProps?: any;
 }
 
 const PeopleWeServe = ({ boxProps, subtitleProps, titleProps }: IProps) => {
@@ -76,22 +127,24 @@ const PeopleWeServe = ({ boxProps, subtitleProps, titleProps }: IProps) => {
           breakpoints={[{ maxWidth: "md", cols: 1 }]}
         >
           {filteredFGDs.map((doc) => (
-            <Card
-              className={classes.card}
-              key={doc.title}
-              shadow="sm"
-              radius="md"
-              p="md"
-            >
-              <Title order={5} mb="xs">
+            <Card className={classes.card} key={doc.title}>
+              <Image
+                src={doc.logo}
+                alt="Logo"
+                withPlaceholder
+                radius="sm"
+                style={{ width: 120, height: 108, justifySelf: "center" }}
+              />
+              <Title order={5} className={classes.title}>
                 {doc.title}
               </Title>
-              <Divider my="xs" />
+              <Divider className={classes.divider} />
               <Button
-                fullWidth
-                size="xs"
-                leftIcon={<IconBook size={14} />}
-                variant="light"
+                leftIcon={<IconBook size={16} />}
+                size="sm"
+                variant="filled"
+                color="blue"
+                className={classes.button}
                 onClick={() => window.open(doc.link, "_blank")}
               >
                 View Document
@@ -111,43 +164,36 @@ const PeopleWeServe = ({ boxProps, subtitleProps, titleProps }: IProps) => {
           breakpoints={[{ maxWidth: "md", cols: 1 }]}
         >
           {filteredISS.map((session) => (
-            <Card
-              className={classes.card}
-              key={session.title}
-              shadow="sm"
-              radius="md"
-              p="md"
-            >
-              <Title order={5} mb="xs">
+            <Card className={classes.card} key={session.title}>
+              <Title order={5} className={classes.title} mb="md">
                 {session.title}
               </Title>
-              <Divider my="xs" />
+              <Divider className={classes.divider} />
               <Button
-                fullWidth
-                size="xs"
-                leftIcon={<IconBook size={14} />}
-                variant="light"
+                leftIcon={<IconBook size={16} />}
+                size="sm"
+                variant="filled"
+                color="blue"
+                className={classes.button}
                 onClick={() => window.open(session.pdfLink, "_blank")}
-                mb="xs"
+                fullWidth
+                mb={session.videoLink ? "xs" : 0}
               >
-                View PDF
+                View Document
               </Button>
-              <Box style={{ position: "relative", paddingTop: "56.25%" }}>
-                <iframe
-                  src={session.videoLink}
-                  title={`${session.title} Video`}
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    border: 0,
-                  }}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </Box>
+              {session.videoLink && (
+                <Button
+                  leftIcon={<IconBook size={16} />}
+                  size="sm"
+                  variant="outline"
+                  color="dark"
+                  className={classes.button}
+                  onClick={() => window.open(session.videoLink, "_blank")}
+                  fullWidth
+                >
+                  View Session Recording
+                </Button>
+              )}
             </Card>
           ))}
         </SimpleGrid>

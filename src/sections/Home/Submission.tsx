@@ -72,7 +72,26 @@ function Submission({
         </div>
       </Group>
       <Divider my="xs" />
-      <SimpleGrid cols={2} spacing="xs">
+
+      {/* Summary button alone on top */}
+      <Button
+        leftIcon={<IconPhoto size={14} />}
+        size="sm"
+        variant="filled"
+        color="blue" // You can change this to match your site's primary color
+        fullWidth
+        mb="xs"
+        style={{
+          fontWeight: 600,
+          letterSpacing: 0.2,
+        }}
+        onClick={() => onReportClick(summary)}
+      >
+        Summary
+      </Button>
+
+      {/* Other buttons grouped below */}
+      <Group grow spacing="xs" mt="xs">
         <Button
           leftIcon={<IconBook size={14} />}
           size="xs"
@@ -100,16 +119,7 @@ function Submission({
         >
           Communication
         </Button>
-        <Button
-          leftIcon={<IconPhoto size={14} />}
-          size="xs"
-          variant="outline"
-          color="dark"
-          onClick={() => onReportClick(summary)}
-        >
-          Summary
-        </Button>
-      </SimpleGrid>
+      </Group>
     </Card>
   );
 }
