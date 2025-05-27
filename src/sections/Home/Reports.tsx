@@ -21,7 +21,7 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: theme.white,
     border: `1px solid ${theme.colors.gray[3]}`,
     borderRadius: theme.radius.md,
-    minHeight: 280,
+    // minHeight: 280,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
