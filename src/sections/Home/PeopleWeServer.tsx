@@ -51,7 +51,7 @@ const PeopleWeServe = ({ boxProps, subtitleProps, titleProps }: IProps) => {
   return (
     <Box {...boxProps} id="peopleWeServe" style={{ marginBottom: "1.5rem" }}>
       <Box mb="lg">
-        <TitleBadge title="VOICES FROM THE PEOPLE WE SERVE" />
+        <TitleBadge color="red" title="VOICES FROM THE PEOPLE WE SERVE" />
         <Title {...titleProps}>Community Reflections and Dialogue</Title>
         <Text {...subtitleProps}>
           Firsthand perspectives shared through focus group discussions and

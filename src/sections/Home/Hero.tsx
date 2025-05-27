@@ -10,7 +10,6 @@ import {
   Title,
 } from "@mantine/core";
 import { IconRocket } from "@tabler/icons-react";
-import slider from "../../assets/img/slider.png";
 
 const HeroSection = () => {
   const { classes } = useStyles();
@@ -95,7 +94,7 @@ const useStyles = createStyles((theme) => ({
     position: "relative",
     paddingTop: rem(180),
     paddingBottom: rem(130),
-    backgroundImage: slider,
+    backgroundImage: "url(https://i.imgur.com/8Y9y4JV.png)",
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: rem(640),

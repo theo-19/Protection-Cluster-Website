@@ -1,29 +1,43 @@
-import {createStyles, Text, TextProps} from "@mantine/core";
-
-const useStyles = createStyles((theme) => ({
-    badge: {
-        width: "fit-content",
-        padding: `${theme.spacing.xs} ${theme.spacing.sm}`,
-        borderRadius: theme.radius.xl,
-        backgroundColor: theme.colors.secondary[1],
-        color: theme.black,
-        fontWeight: 400,
-        textTransform: 'uppercase',
-        fontSize: theme.fontSizes.sm,
-        lineHeight: '14px'
-    }
-}))
+import { createStyles, Text, TextProps } from "@mantine/core";
 
 interface IProps extends TextProps {
-    title: string
+  title: string;
+  color: "blue" | "red" | "orange" | "green" | "darkGray";
 }
 
-const TitleBadge = ({title}: IProps) => {
-    const {classes} = useStyles();
+const colors = {
+  red: "#ee2324",
+  orange: "#fcb040",
+  green: "#00a650",
+  blue: "#00aeef",
+  darkGray: "#232020",
+};
 
-    return (
-        <Text className={classes.badge} mb="lg">{title}</Text>
-    );
+const TitleBadge = ({ title, color }: IProps) => {
+  const { classes } = useStyles();
+
+  return (
+    <Text
+      style={{ backgroundColor: colors[color] }}
+      className={classes.badge}
+      mb="lg"
+    >
+      {title}
+    </Text>
+  );
 };
 
 export default TitleBadge;
+
+const useStyles = createStyles((theme) => ({
+  badge: {
+    width: "fit-content",
+    padding: `${theme.spacing.xs} ${theme.spacing.sm}`,
+    borderRadius: theme.radius.xl,
+    color: theme.white,
+    fontWeight: 500,
+    textTransform: "uppercase",
+    fontSize: theme.fontSizes.sm,
+    lineHeight: "14px",
+  },
+}));

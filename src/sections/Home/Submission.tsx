@@ -143,7 +143,7 @@ const SubmissionsSection = ({
   return (
     <Box {...boxProps} id="submissions" style={{ marginBottom: "1.5rem" }}>
       <Box mb="lg">
-        <TitleBadge title="Voices from Our Partners" />
+        <TitleBadge color="blue" title="Best Field Practices" />
         <Title {...titleProps}> Our Partners Submissions</Title>
         <Text {...subtitleProps}>
           Explore best protection practices directly from our field partners.

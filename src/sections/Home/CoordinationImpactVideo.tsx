@@ -29,7 +29,10 @@ const CoordinationImpactVideo = ({
       style={{ marginBottom: "1.5rem" }}
     >
       <Box mb="lg">
-        <TitleBadge title="HUMANITARIAN COORDINATION IN ACTION" />
+        <TitleBadge
+          color="orange"
+          title="HUMANITARIAN COORDINATION IN ACTION"
+        />
         <Title {...titleProps}>
           Coordinating Protection Efforts in Northwest Syria
         </Title>

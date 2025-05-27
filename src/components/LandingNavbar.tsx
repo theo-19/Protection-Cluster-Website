@@ -24,9 +24,8 @@ const HEADER_HEIGHT = 60;
 
 const navLinks = [
   { to: "home", label: "Home" },
-  { to: "submissions", label: "Best field practices" },
+  { to: "submissions", label: "Best Field Practices" },
   { to: "peopleWeServe", label: "Voices from People We Serve" },
-  { to: "partners", label: "Our Partners" },
   { to: "resources", label: "Resources" },
   { to: "contact", label: "Contact" },
 ];
