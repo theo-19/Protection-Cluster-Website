@@ -1,21 +1,21 @@
 import {
-  Badge,
-  Box,
-  Button,
-  Card,
-  createStyles,
-  Divider,
-  Group,
-  Pagination,
-  SimpleGrid,
-  Text,
-  TextInput,
-  Title,
-} from "@mantine/core";
-import { IconLayoutDashboard, IconSearch } from "@tabler/icons-react";
-import { useState } from "react";
-import TitleBadge from "../../components/TitleBadge";
-import { dashboards } from "../../data/dahsboards";
+    Badge,
+    Box,
+    Button,
+    Card,
+    createStyles,
+    Divider,
+    Group,
+    Pagination,
+    SimpleGrid,
+    Text,
+    TextInput,
+    Title,
+} from "@mantine/core"
+import { IconLayoutDashboard, IconSearch } from "@tabler/icons-react"
+import { useState } from "react"
+import TitleBadge from "../../components/TitleBadge"
+import { dashboards } from "../../data/dahsboards"
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -52,14 +52,14 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-function filterBySearch(items, search, keys) {
+function filterBySearch(items: any, search: any, keys: any) {
   const term = search.toLowerCase();
-  return items.filter((item) =>
-    keys.some((key) => String(item[key]).toLowerCase().includes(term))
+  return items.filter((item: any) =>
+    keys.some((key: any) => String(item[key]).toLowerCase().includes(term))
   );
 }
 
-function paginate(items, page, pageSize) {
+function paginate(items: any, page: any, pageSize: any) {
   const start = (page - 1) * pageSize;
   return items.slice(start, start + pageSize);
 }
@@ -78,7 +78,7 @@ export function DashboardsList() {
   const total = Math.ceil(filtered.length / PAGE_SIZE);
   const paginated = paginate(filtered, page, PAGE_SIZE);
 
-  function handleSearchChange(e) {
+  function handleSearchChange(e:any) {
     setSearch(e.currentTarget.value);
     setPage(1);
   }
@@ -98,7 +98,7 @@ export function DashboardsList() {
         spacing="md"
         breakpoints={[{ maxWidth: "md", cols: 1 }]}
       >
-        {paginated.map((dashboard, idx) => (
+        {paginated.map((dashboard: any, idx: any) => (
           <Card className={classes.card} key={dashboard.link + idx}>
             <Group spacing="xs" mb="xs">
               <Badge color="blue" variant="light" size="sm">
