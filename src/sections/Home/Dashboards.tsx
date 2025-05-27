@@ -84,7 +84,7 @@ export function DashboardsList() {
   }
 
   return (
-    <Box>
+    <Box id="resources">
       <TitleBadge color="blue" title="Dashboards" />
       <TextInput
         mb="md"

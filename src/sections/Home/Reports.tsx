@@ -1,20 +1,20 @@
 import {
-  Badge,
-  Box,
-  Button,
-  Card,
-  createStyles,
-  Divider,
-  Group,
-  Pagination,
-  SimpleGrid,
-  TextInput,
-  Title,
-} from "@mantine/core";
-import { IconBook, IconSearch } from "@tabler/icons-react";
-import { useState } from "react";
-import { TitleBadge } from "../../components";
-import { reports } from "../../data/reports";
+    Badge,
+    Box,
+    Button,
+    Card,
+    createStyles,
+    Divider,
+    Group,
+    Pagination,
+    SimpleGrid,
+    TextInput,
+    Title,
+} from "@mantine/core"
+import { IconBook, IconSearch } from "@tabler/icons-react"
+import { useState } from "react"
+import { TitleBadge } from "../../components"
+import { reports } from "../../data/reports"
 
 const useStyles = createStyles((theme) => ({
   card: {

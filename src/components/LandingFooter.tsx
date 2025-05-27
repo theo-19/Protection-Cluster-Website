@@ -20,7 +20,6 @@ const footerLinks = [
       { label: "Home", link: "home" },
       { label: "Best Field Practices", link: "submissions" },
       { label: "Voices From People We Serve", link: "peopleWeServe" },
-      { label: "Our Partners", link: "partners" },
       { label: "Resources", link: "resources" },
       { label: "Contact", link: "contact" },
     ],
