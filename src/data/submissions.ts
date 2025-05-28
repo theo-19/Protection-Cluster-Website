@@ -1,5 +1,20 @@
 export const submissions = [
   {
+    logo: "https://i.imgur.com/lugwkv5.jpg",
+    title: "BAHAR",
+    website: "https://bahar.ngo/",
+    reports:
+      "https://drive.google.com/drive/folders/1rsx0CataFF7aDKtlUUenblcxgfVGspsI?usp=sharing",
+    trainings:
+      "https://drive.google.com/drive/folders/1ZFFTyveqxMfxbRVTtwMTJnMTHCS8hqKe?usp=drive_link",
+    communication:
+      "https://drive.google.com/drive/folders/1Y96MqCfMt4I92Ico8ObRW2xCPGD5gZhy?usp=sharing",
+    summary:
+      "https://drive.google.com/file/d/1XRyhkvwsbWbMlw4nXlSZxGBD6sl-bKvv/view?usp=drive_link",
+    tag: "social cohesion",
+  },
+  {
+    title: "E&E",
     logo: "https://i.imgur.com/JB9SIkH.png",
     website: "https://ee-sy.org/",
     tag: "Cyber violence, women",
@@ -13,6 +28,7 @@ export const submissions = [
       "https://drive.google.com/file/d/1XfEpdwX32Dr-oZO7PWQdb2ObzljOhR02/view?usp=sharing",
   },
   {
+    title: "Ihsan RD",
     logo: "https://i.imgur.com/9tnCIwR.png",
     website: "https://www.ihsanrd.org/",
     tag: "Capacity building, GBV",
@@ -24,6 +40,7 @@ export const submissions = [
       "https://drive.google.com/file/d/1QiPqkjWfzYqwIAjjFNjBiaSj1gchqmBv/view?usp=sharing",
   },
   {
+    title: "SOP",
     logo: "https://i.imgur.com/fooJlmx.png",
     website: "https://spaceofpeace.org/",
     tag: "Capacity building",
@@ -37,6 +54,7 @@ export const submissions = [
       "https://drive.google.com/drive/folders/1T20OBytNqFrXuTwCXK2z_HOzpZif8Sub?usp=sharing",
   },
   {
+    title: "Shafak",
     logo: "https://i.imgur.com/ltxpMWj.png",
     website: "https://shafak.org/",
     tag: "victims assistance",
@@ -50,6 +68,7 @@ export const submissions = [
       "https://drive.google.com/drive/folders/1TPoMk4xHoju8Fp57F5Odx1fZbGHnKnrP?usp=sharing",
   },
   {
+    title: "Shafak",
     logo: "https://i.imgur.com/ltxpMWj.png",
     website: "https://shafak.org/",
     tag: "legal, evictions",
@@ -63,6 +82,7 @@ export const submissions = [
       "https://drive.google.com/drive/folders/1TTnTKGNCo-eKXoKAy4zHMsdrIfiw4l3o?usp=sharing",
   },
   {
+    title: "IYD",
     logo: "https://i.imgur.com/bEIBChu.png",
     website: "https://iydrelief.org/",
     tag: "HLP safeguarding",
@@ -76,6 +96,7 @@ export const submissions = [
       "https://drive.google.com/file/d/1PV513ZaEoOpA8DGJCJYhOg4WUhv_zAcE/view?usp=sharing",
   },
   {
+    title: "IYD",
     logo: "https://i.imgur.com/bEIBChu.png",
     website: "https://iydrelief.org/",
     tag: "Checklist, food provision",
@@ -89,6 +110,7 @@ export const submissions = [
       "https://drive.google.com/file/d/1PVQDck_CElko_Cwb_0FyvyJtTeoPrWau/view?usp=sharing",
   },
   {
+    title: "LDHR",
     logo: "https://i.imgur.com/UNTC42w.jpg",
     website: "https://www.legal-sy.org/",
     tag: "Stigma",
@@ -102,6 +124,7 @@ export const submissions = [
       "https://drive.google.com/file/d/1Tw62a_pXFctdlRJYpN-tepaet2Ufw8kD/view?usp=sharing",
   },
   {
+    title: "LDHR",
     logo: "https://i.imgur.com/UNTC42w.jpg",
     website: "https://www.legal-sy.org/",
     tag: "ex-detainees",
@@ -115,6 +138,7 @@ export const submissions = [
       "https://drive.google.com/file/d/1U4iyMpooJczaniIRDjsotkmU6VC0wBIg/view?usp=sharing",
   },
   {
+    title: "SRD",
     logo: "https://i.imgur.com/03xnOoG.jpg",
     website: "https://srd.org.tr/",
     tag: "Amal Initiative",
@@ -128,6 +152,7 @@ export const submissions = [
       "https://drive.google.com/drive/folders/1SmSQouN9f2niVgYw7F-ckiSJ1iuh1DUj?usp=sharing",
   },
   {
+    title: "SEMA",
     logo: "https://i.imgur.com/bZWaXVl.jpeg",
     website: "https://www.sema-sy.org/",
     tag: "survivors trafficking",
@@ -141,6 +166,7 @@ export const submissions = [
       "https://drive.google.com/file/d/1Vlt3Fj3WRJ48Xpe8hcKwbDoday6ps1Q0/view?usp=sharing",
   },
   {
+    title: "NAS",
     logo: "https://i.imgur.com/l2Gvebg.jpg",
     website: "https://nas.org.tr/",
     tag: "EORE",
@@ -154,19 +180,9 @@ export const submissions = [
       "https://drive.google.com/file/d/1TnigldmpOtOj_i2PFi6xlhTq6yCFoadR/view?usp=sharing",
   },
   {
-    logo: "https://i.imgur.com/lugwkv5.jpg",
-    website: "https://bahar.ngo/",
-    tag: "social cohesion",
-    report:
-      "https://drive.google.com/file/d/1PnCdnkCM5r44yZFL_6fHtFSWwQg-vrvX/view?usp=sharing",
-    trainings: "",
-    communications: "",
-    summary:
-      "https://drive.google.com/file/d/1RVc6_50H5gHO-vb14Yov1lUdNUXvvXSj/view?usp=sharing",
-  },
-  {
+    title: "SHF",
     logo: "https://i.imgur.com/KJYek68.png",
-    website: "www.partner-website.org",
+    website: "https://shf.ngo/",
     tag: "persons with disabilities",
     report:
       "https://drive.google.com/file/d/1QDuvZSI96ZMDx8yey3QAHKQPu6K98qEL/view?usp=sharing",
@@ -178,8 +194,9 @@ export const submissions = [
       "https://drive.google.com/file/d/1Vd4wpWxupmzRXhPD8M_xf3NG0y54dWAw/view?usp=sharing",
   },
   {
+    title: "ATAA",
     logo: "https://i.imgur.com/ib9ykM8.jpg",
-    website: "www.partner-website.org",
+    website: "https://ataarelief.org/",
     tag: "PSS, children",
     report:
       "https://drive.google.com/file/d/1Q1oF-8t3JYFOGFiYhg2F2bF_M-Gc6D4K/view?usp=sharing",
@@ -191,6 +208,7 @@ export const submissions = [
       "https://drive.google.com/file/d/1Uq5Poo-TWMIiIv-DeFv-VXdL9f-9cEg9/view?usp=sharing",
   },
   {
+    title: "ACH",
     logo: "https://i.imgur.com/qWVbUwP.jpg",
     website: "https://actionforhumanity.org/",
     tag: "mobile teams",
@@ -204,8 +222,9 @@ export const submissions = [
       "https://drive.google.com/file/d/1fJPT_XEE_jGBV00KfjHaiNnVB3xXrrnE/view?usp=sharing",
   },
   {
+    title: "HIHFAD",
     logo: "https://i.imgur.com/Yjc89MS.png",
-    website: "www.partner-website.org",
+    website: "https://hihfad.org/",
     tag: "children with disabilities",
     report:
       "https://drive.google.com/file/d/1PasyjSMI-ET46NOASB9TbiVP_nibae1q/view?usp=sharing",
@@ -217,6 +236,7 @@ export const submissions = [
       "https://drive.google.com/file/d/1UVTvj0jnwU_rVa3-WTTVhsR3JSE44Cr9/view?usp=sharing",
   },
   {
+    title: "BINAA",
     logo: "https://i.imgur.com/MLSncN1.jpg",
     website: "https://www.binaadev.org/",
     tag: "Intersectoral response to earthquake",
