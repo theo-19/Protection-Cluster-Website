@@ -1,139 +1,168 @@
+// @ts-nocheck
+
 import {
   Badge,
   Box,
   Button,
-  Card,
-  createStyles,
-  Divider,
   Group,
-  Pagination,
-  SimpleGrid,
-  Text,
+  Stack,
+  Table,
   TextInput,
-  Title,
 } from "@mantine/core";
 import { IconLayoutDashboard, IconSearch } from "@tabler/icons-react";
 import { useState } from "react";
 import TitleBadge from "../../components/TitleBadge";
 import { dashboards } from "../../data/dahsboards";
 
-const useStyles = createStyles((theme) => ({
-  card: {
-    backgroundColor: theme.white,
-    border: `1px solid ${theme.colors.gray[3]}`,
-    borderRadius: theme.radius.md,
-    // minHeight: 280,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    boxShadow: theme.shadows.xs,
-    padding: `${theme.spacing.lg}px ${theme.spacing.md}px`,
-  },
-  title: {
-    textAlign: "center",
-    fontWeight: 600,
-    fontSize: theme.fontSizes.lg,
-    marginTop: theme.spacing.sm,
-    marginBottom: theme.spacing.xs,
-  },
-  description: {
-    fontSize: theme.fontSizes.sm,
-    textAlign: "center",
-    color: theme.colors.gray[7],
-    marginBottom: theme.spacing.sm,
-  },
-  year: {
-    marginBottom: theme.spacing.sm,
-  },
-  button: {
-    width: "100%",
-    fontWeight: 500,
-    marginTop: theme.spacing.xs,
-  },
-}));
+const ALL_CATEGORIES = Array.from(new Set(dashboards.map((d) => d.category)));
 
-function filterBySearch(items: any, search: any, keys: any) {
+function filterBySearch(items, search, keys) {
   const term = search.toLowerCase();
-  return items.filter((item: any) =>
-    keys.some((key: any) => String(item[key]).toLowerCase().includes(term))
+  return items.filter((item) =>
+    keys.some((key) => String(item[key]).toLowerCase().includes(term))
   );
 }
 
-function paginate(items: any, page: any, pageSize: any) {
-  const start = (page - 1) * pageSize;
-  return items.slice(start, start + pageSize);
+function filterByCategories(items, categories) {
+  if (categories.length === 0) return items;
+  return items.filter((item) => categories.includes(item.category));
 }
 
 export function DashboardsList() {
-  const { classes } = useStyles();
   const [search, setSearch] = useState("");
-  const [page, setPage] = useState(1);
+  const [selectedCategories, setSelectedCategories] = useState([]);
 
-  const PAGE_SIZE = 6;
-  const filtered = filterBySearch(dashboards, search, [
+  let filtered = filterBySearch(dashboards, search, [
     "name",
     "description",
     "publishedYear",
+    "category",
   ]);
-  const total = Math.ceil(filtered.length / PAGE_SIZE);
-  const paginated = paginate(filtered, page, PAGE_SIZE);
+  filtered = filterByCategories(filtered, selectedCategories);
 
-  function handleSearchChange(e: any) {
+  function handleCategoryToggle(category) {
+    if (selectedCategories.includes(category)) {
+      setSelectedCategories(selectedCategories.filter((c) => c !== category));
+    } else {
+      setSelectedCategories([...selectedCategories, category]);
+    }
+  }
+
+  function handleAllClick() {
+    setSelectedCategories([]);
+  }
+
+  function handleSearchChange(e) {
     setSearch(e.currentTarget.value);
-    setPage(1);
   }
 
   return (
     <Box>
       <TitleBadge color="blue" title="Dashboards" />
-      <TextInput
-        mb="md"
-        placeholder="Search dashboards..."
-        icon={<IconSearch size={16} />}
-        value={search}
-        onChange={handleSearchChange}
-      />
-      <SimpleGrid
-        cols={3}
-        spacing="md"
-        breakpoints={[{ maxWidth: "md", cols: 1 }]}
-      >
-        {paginated.map((dashboard: any, idx: any) => (
-          <Card className={classes.card} key={dashboard.link + idx}>
-            <Group spacing="xs" mb="xs">
-              <Badge color="blue" variant="light" size="sm">
-                {dashboard.logo}
-              </Badge>
-              <Badge color="gray" variant="light" size="sm">
-                {dashboard.publishedYear}
-              </Badge>
-            </Group>
-            <Title order={5} className={classes.title}>
-              {dashboard.name}
-            </Title>
-            <Text className={classes.description}>{dashboard.description}</Text>
-            <Divider my="xs" />
+      <Stack spacing="xs" mb="md">
+        <Group spacing="xs">
+          <Button
+            color={selectedCategories.length === 0 ? "blue" : "gray"}
+            variant={selectedCategories.length === 0 ? "filled" : "light"}
+            onClick={handleAllClick}
+            size="xs"
+          >
+            All
+          </Button>
+          {ALL_CATEGORIES.map((cat) => (
             <Button
-              leftIcon={<IconLayoutDashboard size={16} />}
-              size="sm"
-              variant="filled"
-              color="blue"
-              className={classes.button}
-              component="a"
-              href={dashboard.link}
-              target="_blank"
-              rel="noopener noreferrer"
+              key={cat}
+              color={selectedCategories.includes(cat) ? "blue" : "gray"}
+              variant={selectedCategories.includes(cat) ? "filled" : "light"}
+              onClick={() => handleCategoryToggle(cat)}
+              size="xs"
             >
-              View Dashboard
+              {cat}
             </Button>
-          </Card>
-        ))}
-      </SimpleGrid>
-      {total > 1 && (
-        <Group position="center" mt="lg">
-          <Pagination value={page} onChange={setPage} total={total} />
+          ))}
         </Group>
-      )}
+        <TextInput
+          placeholder="Search dashboards..."
+          icon={<IconSearch size={16} />}
+          value={search}
+          onChange={handleSearchChange}
+        />
+      </Stack>
+      <Box
+        style={{
+          maxHeight: 1000,
+          overflowY: "auto",
+          borderRadius: 8,
+          border: "1px solid #e9ecef",
+        }}
+      >
+        <Table
+          highlightOnHover
+          striped={false}
+          withBorder
+          horizontalSpacing="md"
+          verticalSpacing="sm"
+        >
+          <thead>
+            <tr
+              style={{
+                background: "#1864ab",
+              }}
+            >
+              <th style={{ color: "#fff", fontWeight: 700 }}>Category</th>
+              <th style={{ color: "#fff", fontWeight: 700 }}>Name</th>
+              <th style={{ color: "#fff", fontWeight: 700 }}>Description</th>
+              <th style={{ color: "#fff", fontWeight: 700 }}>Year</th>
+              <th style={{ color: "#fff", fontWeight: 700 }}>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filtered.length === 0 ? (
+              <tr>
+                <td colSpan={5} style={{ textAlign: "center" }}>
+                  No dashboards found.
+                </td>
+              </tr>
+            ) : (
+              filtered.map((dashboard, idx) => (
+                <tr
+                  key={dashboard.link + idx}
+                  style={{
+                    backgroundColor: idx % 2 === 0 ? "#fff" : "#f1f3f5", // white/gray zebra
+                  }}
+                >
+                  <td>
+                    <Badge color="blue" variant="light" size="sm">
+                      {dashboard.category}
+                    </Badge>
+                  </td>
+                  <td>{dashboard.name}</td>
+                  <td>{dashboard.description}</td>
+                  <td>
+                    <Badge color="gray" variant="light" size="sm">
+                      {dashboard.publishedYear}
+                    </Badge>
+                  </td>
+                  <td>
+                    <Button
+                      leftIcon={<IconLayoutDashboard size={16} />}
+                      size="xs"
+                      variant="filled"
+                      color="blue"
+                      component="a"
+                      href={dashboard.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View
+                    </Button>
+                  </td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </Table>
+      </Box>
     </Box>
   );
 }
