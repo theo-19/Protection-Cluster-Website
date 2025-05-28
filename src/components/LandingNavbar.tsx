@@ -89,9 +89,9 @@ const LandingNavbar = () => {
               <BrandName block="header" src={lightLogo} />
               {!matchesMobile && (
                 <>
-                  <BrandName block="header" src={NWS_CP_Logo} />
-                  <BrandName block="header" src={NWS_GBV_Logo} />
                   <BrandName block="header" src={NWS_HLP_Logo} />
+                  <BrandName block="header" src={NWS_GBV_Logo} />
+                  <BrandName block="header" src={NWS_CP_Logo} />
                 </>
               )}
             </Flex>

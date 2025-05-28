@@ -26,10 +26,78 @@ const footerLinks = [
   },
   {
     title: "Contact",
+
     links: [
       {
-        label: "contact@protectioncluster.org",
-        link: "mailto:contact@protectioncluster.org",
+        label: "Türkiye Cross-border: Protection | ReliefWeb Response",
+        link: `https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fresponse.reliefweb.int%2Fturkiye-cross-border%2Fprotection&data=05%7C02%7Cnael.alsaleh%40bahar.ngo%7Ccee525543941482a3e5e08dd986c3379%7C6646c24ffc4340798cff80f3890ed418%7C0%7C0%7C638834312717154526%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=ZGPkaVfSh8J4sVDNelk%2B7G%2B7unOOfzxCt5CGHpp7BFE%3D&reserved=0`,
+      },
+
+      {
+        label: `Protection Cluster
+Lorena Nieto
+NWS PC coordinator 
+nieto@unhcr.org`,
+        link: "mailto:nieto@unhcr.org",
+      },
+
+      {
+        label: `Savser Talostan
+NWS PC co-coordinator 
+Savser.talostan@rescue.org`,
+        link: "mailto:Savser.talostan@rescue.org",
+      },
+
+      {
+        label: `Gaurab Pradhan
+NWS PC IMO 
+pradhang@unhcr.org`,
+        link: "mailto:pradhang@unhcr.org",
+      },
+
+      {
+        label: `GBV AoR
+Ken Otieno
+GBV AOR coordinator 
+otieno@unfpa.org`,
+        link: "mailto:otieno@unfpa.org",
+      },
+
+      {
+        label: `Eilaf AlBakri
+GBV AOR co-coordinator 
+gvbaorcoc@ihsanrd.org`,
+        link: "mailto:gvbaorcoc@ihsanrd.org",
+      },
+
+      {
+        label: `Majd Sawan
+GBV AoR Subnational Coordinator 
+Msawan.gbvaor@ihsanrd.org`,
+        link: "mailto:Msawan.gbvaor@ihsanrd.org",
+      },
+
+      {
+        label: `HLP AOR
+Skylar Kogelschatz
+HLP AOR co-chair 
+kogelschatz@nrc.no`,
+        link: "mailto:kogelschatz@nrc.no",
+      },
+
+      {
+        label: `CP AoR
+Carmen Girones Monclus
+CP AOR Coordinator 
+cmonclusgirones@unicef.org`,
+        link: "mailto:cmonclusgirones@unicef.org",
+      },
+
+      {
+        label: `Zahir Ozcan
+CP AoR Co-coordinator 
+Zahir_ozcan@wvi.org`,
+        link: "mailto:Zahir_ozcan@wvi.org",
       },
     ],
   },
@@ -82,12 +150,6 @@ const LandingFooter = () => {
               <BrandName block="footer" src={NWS_GBV_Logo} />
               <BrandName block="footer" src={NWS_CP_Logo} />
             </div>
-            <Text size="sm">
-              The Protection Cluster collaborates with humanitarian partners to
-              protect the rights and well-being of people in crisis, ensuring
-              access to safety, dignity, and essential services through
-              coordination, advocacy, and field support.
-            </Text>
           </Stack>
         </div>
         <div className={classes.groups}>{groups}</div>

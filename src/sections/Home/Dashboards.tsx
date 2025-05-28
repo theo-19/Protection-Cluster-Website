@@ -1,21 +1,21 @@
 import {
-    Badge,
-    Box,
-    Button,
-    Card,
-    createStyles,
-    Divider,
-    Group,
-    Pagination,
-    SimpleGrid,
-    Text,
-    TextInput,
-    Title,
-} from "@mantine/core"
-import { IconLayoutDashboard, IconSearch } from "@tabler/icons-react"
-import { useState } from "react"
-import TitleBadge from "../../components/TitleBadge"
-import { dashboards } from "../../data/dahsboards"
+  Badge,
+  Box,
+  Button,
+  Card,
+  createStyles,
+  Divider,
+  Group,
+  Pagination,
+  SimpleGrid,
+  Text,
+  TextInput,
+  Title,
+} from "@mantine/core";
+import { IconLayoutDashboard, IconSearch } from "@tabler/icons-react";
+import { useState } from "react";
+import TitleBadge from "../../components/TitleBadge";
+import { dashboards } from "../../data/dahsboards";
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -78,13 +78,13 @@ export function DashboardsList() {
   const total = Math.ceil(filtered.length / PAGE_SIZE);
   const paginated = paginate(filtered, page, PAGE_SIZE);
 
-  function handleSearchChange(e:any) {
+  function handleSearchChange(e: any) {
     setSearch(e.currentTarget.value);
     setPage(1);
   }
 
   return (
-    <Box id="resources">
+    <Box>
       <TitleBadge color="blue" title="Dashboards" />
       <TextInput
         mb="md"

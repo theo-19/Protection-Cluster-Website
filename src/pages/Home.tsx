@@ -1,10 +1,9 @@
 import { Box, BoxProps, Container, TextProps, TitleProps } from "@mantine/core";
 import { Helmet } from "react-helmet";
 import CoordinationImpactVideo from "../sections/Home/CoordinationImpactVideo.tsx";
-import { DashboardsList } from "../sections/Home/Dashboards.tsx";
 import HeroSection from "../sections/Home/Hero.tsx";
 import PeopleWeServe from "../sections/Home/PeopleWeServer.tsx";
-import { ReportsList } from "../sections/Home/Reports.tsx";
+import Resources from "../sections/Home/Resources.tsx";
 import SubmissionsSection from "../sections/Home/Submission.tsx";
 import SupportingPartnerLogos from "../sections/Home/SupportingParnters.tsx";
 
@@ -65,11 +64,7 @@ const HomePage = (): JSX.Element => {
           <SupportingPartnerLogos boxProps={boxProps} titleProps={titleProps} />
         </Container>
 
-        <Container>
-          <DashboardsList />
-          <ReportsList />
-          <SupportingPartnerLogos boxProps={boxProps} titleProps={titleProps} />
-        </Container>
+        <Resources />
       </Box>
     </>
   );

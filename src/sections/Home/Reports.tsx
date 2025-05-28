@@ -84,7 +84,7 @@ export function ReportsList() {
 
   return (
     <Box style={{ marginTop: 120 }}>
-      <TitleBadge color="red" title="Reports & Resources" />
+      <TitleBadge color="green" title="Reports & Resources" />
       <TextInput
         mb="md"
         placeholder="Search reports..."

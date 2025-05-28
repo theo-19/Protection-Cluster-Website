@@ -17,7 +17,7 @@ const SupportingPartnerLogos = ({ boxProps, titleProps }: IProps) => {
         }}
         {...titleProps}
       >
-        Our Supporting Partners
+        Website Supported By
       </Title>
       <Group position="center" spacing="xl">
         {supportingPartnersData.map((partner) => (

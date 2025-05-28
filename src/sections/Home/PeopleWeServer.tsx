@@ -8,7 +8,6 @@ import {
   Image,
   Input,
   SimpleGrid,
-  Text,
   Title,
 } from "@mantine/core";
 import { IconBook } from "@tabler/icons-react";
@@ -31,7 +30,6 @@ const useStyles = createStyles((theme) => ({
   },
   logo: {
     width: "100%",
-    height: "auto",
     objectFit: "contain",
     margin: "0 auto",
     borderRadius: theme.radius.sm,
@@ -41,6 +39,7 @@ const useStyles = createStyles((theme) => ({
     border: `1px solid ${theme.colors.gray[2]}`,
     display: "block",
   },
+
   title: {
     textAlign: "center",
     fontWeight: 600,
@@ -83,7 +82,7 @@ interface IProps {
   subtitleProps?: any;
 }
 
-const PeopleWeServe = ({ boxProps, subtitleProps, titleProps }: IProps) => {
+const PeopleWeServe = ({ boxProps, titleProps }: IProps) => {
   const { classes } = useStyles();
   const [searchValue, setSearchValue] = useState("");
 
@@ -104,10 +103,6 @@ const PeopleWeServe = ({ boxProps, subtitleProps, titleProps }: IProps) => {
       <Box mb="lg">
         <TitleBadge color="red" title="VOICES FROM THE PEOPLE WE SERVE" />
         <Title {...titleProps}>Community Reflections and Dialogue</Title>
-        <Text {...subtitleProps}>
-          Firsthand perspectives shared through focus group discussions and
-          community information sessions.
-        </Text>
       </Box>
       <Input
         placeholder="Search by title"
@@ -118,8 +113,10 @@ const PeopleWeServe = ({ boxProps, subtitleProps, titleProps }: IProps) => {
       />
 
       <Box mb="xl">
+        <TitleBadge color="green" title="Information Sharing Sessions" />
         <Title order={4} mb="sm">
-          Focus Group Discussions
+          Firsthand perspectives on protection cluster response shared through
+          focus group discussions.
         </Title>
         <SimpleGrid
           cols={3}
@@ -129,11 +126,17 @@ const PeopleWeServe = ({ boxProps, subtitleProps, titleProps }: IProps) => {
           {filteredFGDs.map((doc) => (
             <Card className={classes.card} key={doc.title}>
               <Image
+                height={doc.title === "Volunteer teams" ? 100 : undefined}
                 src={doc.logo}
                 alt="Logo"
                 withPlaceholder
                 radius="sm"
-                style={{ width: 120, height: 108, justifySelf: "center" }}
+                style={{
+                  width: 120,
+                  height: 108,
+                  justifySelf: "center",
+                }}
+                imageProps={{ style: { objectFit: "contain", maxHeight: 100 } }}
               />
               <Title order={5} className={classes.title}>
                 {doc.title}
@@ -155,8 +158,10 @@ const PeopleWeServe = ({ boxProps, subtitleProps, titleProps }: IProps) => {
       </Box>
 
       <Box>
+        <TitleBadge color="orange" title="Information Sharing Sessions" />
         <Title order={4} mb="sm">
-          Information Sharing Sessions
+          Thematic sessions led by Protection Cluster partners to improve
+          coordination during the transition phase.
         </Title>
         <SimpleGrid
           cols={3}

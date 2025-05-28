@@ -1,15 +1,12 @@
 import {
-  Center,
   Container,
   createStyles,
-  Group,
   Overlay,
   rem,
   Stack,
   Text,
   Title,
 } from "@mantine/core";
-import { IconRocket } from "@tabler/icons-react";
 
 const HeroSection = () => {
   const { classes } = useStyles();
@@ -21,14 +18,8 @@ const HeroSection = () => {
       <div className={classes.inner}>
         <Container>
           <Stack spacing="xl">
-            <Center>
-              <Group spacing={4} className={classes.badge}>
-                <IconRocket stroke={1.5} />
-                <Text transform="uppercase">Make it Happen</Text>
-              </Group>
-            </Center>
             <Title className={classes.title}>
-              Protect lives{" "}
+              Protecting communities{" "}
               <Text
                 component="span"
                 inherit
@@ -38,9 +29,8 @@ const HeroSection = () => {
                   to: "#fcb040",
                 }}
               >
-                uphold dignity
+                strengthening the resilience
               </Text>{" "}
-              and{" "}
               <Text
                 component="span"
                 inherit
@@ -50,13 +40,13 @@ const HeroSection = () => {
                   to: "#00a650",
                 }}
               >
-                support those most at risk.
+                of those most at risk
               </Text>
             </Title>
             <Text size="lg" className={classes.description}>
-              Join our mission to ensure safety, rights, and dignity for all.
-              Together, we can make a meaningful impact in the lives of
-              crisis-affected communities.
+              Discover our best practices in protection coordination through our
+              partners, networks, and the people we serve, between 2023 and
+              2025.
             </Text>
           </Stack>
         </Container>
