@@ -14,7 +14,6 @@ import { useState } from "react";
 import { TitleBadge } from "../../components";
 import { reports } from "../../data/reports";
 
-// Unique categories and AoRs
 const ALL_CATEGORIES = Array.from(new Set(reports.map((r) => r.category)));
 const ALL_AORS = Array.from(
   new Set(reports.map((r) => (r.AoR && r.AoR.trim() ? r.AoR : "(None)")))
@@ -84,9 +83,7 @@ export function ReportsList() {
     <Box style={{ marginTop: 120 }}>
       <TitleBadge color="green" title="Reports & Resources" />
 
-      {/* Filter Buttons */}
       <Stack spacing="xs" mb="md">
-        {/* Category filters */}
         <Group spacing="xs">
           <Button
             color={selectedCategories.length === 0 ? "green" : "gray"}
@@ -109,7 +106,6 @@ export function ReportsList() {
           ))}
         </Group>
 
-        {/* AoR filters */}
         <Group spacing="xs">
           <Button
             color={selectedAoRs.length === 0 ? "orange" : "gray"}
@@ -146,7 +142,7 @@ export function ReportsList() {
           overflowY: "auto",
           borderRadius: 8,
           border: "1px solid #e9ecef",
-          minWidth: 0, // prevents horizontal scroll on parent
+          minWidth: 0,
         }}
       >
         <Table
