@@ -124,16 +124,22 @@ function Submission({
         >
           Trainings
         </Button>
-        <Button
-          size="sm"
-          variant="outline"
-          color="dark"
-          onClick={() => onReportClick(communication)}
-          style={{ fontWeight: 500, fontSize: 12 }}
-        >
-          Communication
-        </Button>
       </Group>
+      <Button
+        size="sm"
+        variant="outline"
+        color="dark"
+        fullWidth
+        mb="xs"
+        style={{
+          fontWeight: 500,
+          fontSize: 12,
+          marginTop: 8,
+        }}
+        onClick={() => onReportClick(communication)}
+      >
+        Communications
+      </Button>
     </Card>
   );
 }
