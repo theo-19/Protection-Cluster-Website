@@ -34,5 +34,7 @@ export const informationSharingSessisos = [
     title: "Information Sharing Sessions on Peaceful Co-existence",
     pdfLink:
       "https://drive.google.com/file/d/1gHrCFuiG6aOaiKmnWhLzxgkmbuW-VHAm/view?usp=sharing",
+    photosLink:
+      "https://drive.google.com/drive/folders/1gKbMLA-Z_lJfBb58KNHUMznTh-oX9KIp?usp=sharing",
   },
 ];
