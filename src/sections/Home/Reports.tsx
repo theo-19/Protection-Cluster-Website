@@ -14,7 +14,11 @@ import { useState } from "react";
 import { TitleBadge } from "../../components";
 import { reports } from "../../data/reports";
 
+// Unique categories and AoRs
 const ALL_CATEGORIES = Array.from(new Set(reports.map((r) => r.category)));
+const ALL_AORS = Array.from(
+  new Set(reports.map((r) => (r.AoR && r.AoR.trim() ? r.AoR : "(None)")))
+);
 
 function filterBySearch(items, search, keys) {
   const term = search.toLowerCase();
@@ -28,27 +32,48 @@ function filterByCategories(items, categories) {
   return items.filter((item) => categories.includes(item.category));
 }
 
+function filterByAoRs(items, aors) {
+  if (aors.length === 0) return items;
+  return items.filter((item) => {
+    const aoR = item.AoR && item.AoR.trim() ? item.AoR : "(None)";
+    return aors.includes(aoR);
+  });
+}
+
 export function ReportsList() {
   const [search, setSearch] = useState("");
   const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedAoRs, setSelectedAoRs] = useState([]);
 
   let filtered = filterBySearch(reports, search, [
     "name",
     "category",
     "publishedYear",
+    "AoR",
   ]);
   filtered = filterByCategories(filtered, selectedCategories);
+  filtered = filterByAoRs(filtered, selectedAoRs);
 
   function handleCategoryToggle(category) {
-    if (selectedCategories.includes(category)) {
-      setSelectedCategories(selectedCategories.filter((c) => c !== category));
-    } else {
-      setSelectedCategories([...selectedCategories, category]);
-    }
+    setSelectedCategories((current) =>
+      current.includes(category)
+        ? current.filter((c) => c !== category)
+        : [...current, category]
+    );
+  }
+  function handleAllCategoryClick() {
+    setSelectedCategories([]);
   }
 
-  function handleAllClick() {
-    setSelectedCategories([]);
+  function handleAoRToggle(aor) {
+    setSelectedAoRs((current) =>
+      current.includes(aor)
+        ? current.filter((c) => c !== aor)
+        : [...current, aor]
+    );
+  }
+  function handleAllAoRClick() {
+    setSelectedAoRs([]);
   }
 
   function handleSearchChange(e) {
@@ -58,15 +83,18 @@ export function ReportsList() {
   return (
     <Box style={{ marginTop: 120 }}>
       <TitleBadge color="green" title="Reports & Resources" />
+
+      {/* Filter Buttons */}
       <Stack spacing="xs" mb="md">
+        {/* Category filters */}
         <Group spacing="xs">
           <Button
             color={selectedCategories.length === 0 ? "green" : "gray"}
             variant={selectedCategories.length === 0 ? "filled" : "light"}
-            onClick={handleAllClick}
+            onClick={handleAllCategoryClick}
             size="xs"
           >
-            All
+            All Categories
           </Button>
           {ALL_CATEGORIES.map((cat) => (
             <Button
@@ -80,6 +108,30 @@ export function ReportsList() {
             </Button>
           ))}
         </Group>
+
+        {/* AoR filters */}
+        <Group spacing="xs">
+          <Button
+            color={selectedAoRs.length === 0 ? "orange" : "gray"}
+            variant={selectedAoRs.length === 0 ? "filled" : "light"}
+            onClick={handleAllAoRClick}
+            size="xs"
+          >
+            All AoRs
+          </Button>
+          {ALL_AORS.map((aor) => (
+            <Button
+              key={aor}
+              color={selectedAoRs.includes(aor) ? "orange" : "gray"}
+              variant={selectedAoRs.includes(aor) ? "filled" : "light"}
+              onClick={() => handleAoRToggle(aor)}
+              size="xs"
+            >
+              {aor === "(None)" ? "No AoR" : aor}
+            </Button>
+          ))}
+        </Group>
+
         <TextInput
           placeholder="Search reports..."
           icon={<IconSearch size={16} />}
@@ -87,12 +139,14 @@ export function ReportsList() {
           onChange={handleSearchChange}
         />
       </Stack>
+
       <Box
         style={{
           maxHeight: 1000,
           overflowY: "auto",
           borderRadius: 8,
           border: "1px solid #e9ecef",
+          minWidth: 0, // prevents horizontal scroll on parent
         }}
       >
         <Table
@@ -101,10 +155,18 @@ export function ReportsList() {
           withBorder
           horizontalSpacing="md"
           verticalSpacing="sm"
+          style={{ tableLayout: "fixed", width: "100%" }}
         >
+          <colgroup>
+            <col style={{ width: "16%" }} />
+            <col style={{ width: "20%" }} />
+            <col style={{ width: "38%" }} />
+            <col style={{ width: "12%" }} />
+            <col style={{ width: "14%" }} />
+          </colgroup>
           <thead>
-            <tr style={{ background: "#2b8a3e" /* Mantine green[8] */ }}>
-              {/* <th style={{ color: "#fff", fontWeight: 700 }}>Logo</th> */}
+            <tr style={{ background: "#2b8a3e" }}>
+              <th style={{ color: "#fff", fontWeight: 700 }}>AoR</th>
               <th style={{ color: "#fff", fontWeight: 700 }}>Category</th>
               <th style={{ color: "#fff", fontWeight: 700 }}>Name</th>
               <th style={{ color: "#fff", fontWeight: 700 }}>Year</th>
@@ -114,7 +176,7 @@ export function ReportsList() {
           <tbody>
             {filtered.length === 0 ? (
               <tr>
-                <td colSpan={4} style={{ textAlign: "center" }}>
+                <td colSpan={5} style={{ textAlign: "center" }}>
                   No reports found.
                 </td>
               </tr>
@@ -127,11 +189,25 @@ export function ReportsList() {
                   }}
                 >
                   <td>
+                    <Badge color="orange" variant="light" size="sm">
+                      {report.AoR && report.AoR.trim() ? report.AoR : "No AoR"}
+                    </Badge>
+                  </td>
+                  <td>
                     <Badge color="teal" variant="light" size="sm">
                       {report.category}
                     </Badge>
                   </td>
-                  <td>{report.name}</td>
+                  <td
+                    style={{
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                    }}
+                    title={report.name}
+                  >
+                    {report.name}
+                  </td>
                   <td>
                     <Badge color="gray" variant="light" size="sm">
                       {report.publishedYear}
@@ -148,7 +224,7 @@ export function ReportsList() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      View Document
+                      View
                     </Button>
                   </td>
                 </tr>
