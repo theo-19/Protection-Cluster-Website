@@ -105,10 +105,8 @@ function Submission({
         Summary
       </Button>
 
-      {/* Other buttons grouped below */}
       <Group grow spacing="xs" mt="xs">
         <Button
-          // leftIcon={<IconBook size={14} />}
           size="sm"
           variant="outline"
           color="dark"
@@ -118,7 +116,6 @@ function Submission({
           Reports
         </Button>
         <Button
-          // leftIcon={<IconCertificate size={14} />}
           size="sm"
           variant="outline"
           color="dark"
@@ -128,7 +125,6 @@ function Submission({
           Trainings
         </Button>
         <Button
-          // leftIcon={<IconPhoneCalling size={14} />}
           size="sm"
           variant="outline"
           color="dark"

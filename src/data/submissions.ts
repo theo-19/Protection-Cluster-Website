@@ -1,247 +1,250 @@
 export const submissions = [
   {
     logo: "https://i.imgur.com/lugwkv5.jpg",
-    title: "BAHAR",
+    title: "Bahar",
     website: "https://bahar.ngo/",
-    reports:
-      "https://drive.google.com/drive/folders/1rsx0CataFF7aDKtlUUenblcxgfVGspsI?usp=sharing",
-    trainings:
-      "https://drive.google.com/drive/folders/1ZFFTyveqxMfxbRVTtwMTJnMTHCS8hqKe?usp=drive_link",
-    communication:
-      "https://drive.google.com/drive/folders/1Y96MqCfMt4I92Ico8ObRW2xCPGD5gZhy?usp=sharing",
-    summary:
-      "https://drive.google.com/file/d/1XRyhkvwsbWbMlw4nXlSZxGBD6sl-bKvv/view?usp=drive_link",
     tag: "social cohesion",
+    reports:
+      "https://drive.google.com/file/d/1PnCdnkCM5r44yZFL_6fHtFSWwQg-vrvX/view?usp=sharing",
+    trainings: "",
+    communication: "",
+    summary:
+      "https://drive.google.com/file/d/1RVc6_50H5gHO-vb14Yov1lUdNUXvvXSj/view?usp=sharing",
   },
   {
     logo: "https://i.imgur.com/JB9SIkH.png",
-    title: "E&E",
+    title: "EE",
     website: "https://ee-sy.org/",
-    reports:
-      "https://drive.google.com/file/d/1WlAeH9BTLUzGfdWlrDiCd9qu8kSINAl9/view?usp=drive_link",
-    trainings:
-      "https://drive.google.com/file/d/1AQ4A3TOi7NqTyv7voIfBT2Z_QlEoVjcc/view?usp=drive_link",
-    communication:
-      "https://docs.google.com/document/d/1JOpMHvH7yOmiyC81zPN_mUcGQ00s3G1d/edit?usp=drive_link&ouid=108569260090502725033&rtpof=true&sd=true",
-    summary:
-      "https://drive.google.com/file/d/1ZfnqDgu3Nzsx8iEomPl56tu5Ln3HxLGj/view?usp=drive_link",
     tag: "Cyber violence, women",
+    reports:
+      "https://drive.google.com/file/d/1PePPGkhu3-D5vbuZW6PVEPR8-8DGCU7c/view?usp=sharing",
+    trainings:
+      "https://drive.google.com/file/d/1VPDh4JnvY226EBocklTajNHRmpMRd14U/view?usp=sharing",
+    communication:
+      "https://drive.google.com/file/d/1VRWU_gYqDLJlP1cQZu8I2wYa9wa9HRfe/view?usp=sharing",
+    summary:
+      "https://drive.google.com/file/d/1XfEpdwX32Dr-oZO7PWQdb2ObzljOhR02/view?usp=sharing",
   },
   {
     logo: "https://i.imgur.com/9tnCIwR.png",
     title: "IHSAN",
     website: "https://www.ihsanrd.org/",
-    reports: "Reports",
-    trainings:
-      "https://ihsanrdorg-my.sharepoint.com/:f:/g/personal/aalysean_ihsanrd_org/Eqjs3jKZzw5Alth_OgEcO7wBFJydouDQDaPsHZ1gQQS6pg?e=9XMMSA",
-    communication: "Communication Pieces",
-    summary:
-      "https://drive.google.com/file/d/1_amUyj_2bkilptIly5mjCZlFhJE61A9w/view?usp=drive_link",
     tag: "Capacity building, GBV",
+    reports:
+      "https://drive.google.com/file/d/1P_C1HZ42sTprK3O-3PdUThm6AOqb1otp/view?usp=sharing",
+    trainings: "",
+    communication: "",
+    summary:
+      "https://drive.google.com/file/d/1QiPqkjWfzYqwIAjjFNjBiaSj1gchqmBv/view?usp=sharing",
   },
   {
     logo: "https://i.imgur.com/fooJlmx.png",
     title: "SOP",
     website: "https://spaceofpeace.org/",
-    reports:
-      "https://drive.google.com/file/d/1QOWzrzmb0Ea9v7_9KryW5abN10T0hvnN/view?usp=drive_link",
-    trainings:
-      "https://docs.google.com/document/d/1gqWT7mTaWErNkHzsKzfEzY4_n3mQwoNv/edit?usp=drive_link&ouid=108569260090502725033&rtpof=true&sd=true",
-    communication:
-      "https://docs.google.com/document/d/1ohJ0PjbZp65tM36HSUoD3cxN-SdxFqFC/edit?usp=drive_link&ouid=108569260090502725033&rtpof=true&sd=true",
-    summary:
-      "https://drive.google.com/file/d/1QOxZRuwoEs3nAaSdqbrSn1w5KMuhD-f8/view?usp=drive_link",
     tag: "Capacity building",
+    reports:
+      "https://drive.google.com/file/d/1Q7WkgvGUmt3IwgSIJgXVjiih-zEkLbjm/view?usp=sharing",
+    trainings:
+      "https://drive.google.com/file/d/1W5WIursevjRuIIsxLvZYrFzcgKkoH6Cn/view?usp=sharing",
+    communication:
+      "https://drive.google.com/file/d/1VavThY2QFAUpvozTvkmk0PuXet0WVKIz/view?usp=sharing",
+    summary:
+      "https://drive.google.com/drive/folders/1T20OBytNqFrXuTwCXK2z_HOzpZif8Sub?usp=sharing",
   },
   {
     logo: "https://i.imgur.com/ltxpMWj.png",
     title: "SHAFAK",
     website: "https://shafak.org/",
-    reports:
-      "https://docs.google.com/document/d/1WsmiZ4xWuHsSoRCAHwMw6YFXMywffwTG/edit?usp=drive_link&ouid=108569260090502725033&rtpof=true&sd=true",
-    trainings:
-      "https://drive.google.com/file/d/1LWoqx7nxkyCyYEetj8nGuS8URk-LAc0O/view?usp=drive_link",
-    communication:
-      "https://drive.google.com/file/d/1Sj2FFf4GwJnup3vIRyKVFr5F4SP-2oSL/view?usp=drive_linkhttps://docs.google.com/presentation/d/1iSsgaeQ5oH5ujfjylSOTK5g2J8SliKwz/edit?usp=drive_link&ouid=108569260090502725033&rtpof=true&sd=true",
-    summary:
-      "https://drive.google.com/file/d/1t1VqcCjpUbpzZVb0qcMNPqAshWlAviTZ/view?usp=drive_link",
     tag: "victims assistance",
+    reports:
+      "https://drive.google.com/file/d/1QED7E2mqSZxhz3KfEQutHbWNXQLuyXok/view?usp=sharing",
+    trainings:
+      "https://drive.google.com/file/d/1VeTIZJSHQ3eU26tKWHsdEh9J06PPSnIR/view?usp=sharing",
+    communication:
+      "https://drive.google.com/file/d/1VTGI1cfGAJ0z046fjAXvOoQEM5uTUBIU/view?usp=sharing",
+    summary:
+      "https://drive.google.com/drive/folders/1TPoMk4xHoju8Fp57F5Odx1fZbGHnKnrP?usp=sharing",
   },
   {
     logo: "https://i.imgur.com/ltxpMWj.png",
     title: "SHAFAK",
     website: "https://shafak.org/",
-    reports:
-      "https://docs.google.com/document/d/1WsmiZ4xWuHsSoRCAHwMw6YFXMywffwTG/edit?usp=drive_link&ouid=108569260090502725033&rtpof=true&sd=true",
-    trainings:
-      "https://drive.google.com/file/d/1LWoqx7nxkyCyYEetj8nGuS8URk-LAc0O/view?usp=drive_link",
-    communication:
-      "https://drive.google.com/file/d/1Sj2FFf4GwJnup3vIRyKVFr5F4SP-2oSL/view?usp=drive_linkhttps://docs.google.com/presentation/d/1iSsgaeQ5oH5ujfjylSOTK5g2J8SliKwz/edit?usp=drive_link&ouid=108569260090502725033&rtpof=true&sd=true",
-    summary:
-      "https://drive.google.com/file/d/1t1VqcCjpUbpzZVb0qcMNPqAshWlAviTZ/view?usp=drive_link",
     tag: "legal, evictions",
+    reports:
+      "https://drive.google.com/file/d/1QI7E0e0MAptq6koOq7DM0iJleSbda4gB/view?usp=sharing",
+    trainings:
+      "https://drive.google.com/file/d/1VWdOihQGrkTfl3VUCnCFQBcAvb6zidt7/view?usp=sharing",
+    communication:
+      "https://drive.google.com/file/d/1VTYICCEucz18j9squMF0V_FrUjFF6K6G/view?usp=sharing",
+    summary:
+      "https://drive.google.com/drive/folders/1TTnTKGNCo-eKXoKAy4zHMsdrIfiw4l3o?usp=sharing",
   },
   {
     logo: "https://i.imgur.com/bEIBChu.png",
     title: "IYD",
     website: "https://iydrelief.org/",
-    reports:
-      "https://drive.google.com/file/d/1J0eKYhhZZaYY9lulee3pDpg-g82vtqsR/view?usp=drive_link",
-    trainings:
-      "https://drive.google.com/file/d/1wIAInROk5iLP4lifRiRm6x9_Wr4QuKy0/view?usp=drive_link",
-    communication:
-      "https://drive.google.com/file/d/1chfvXOC4NJywy61qysvPyxX-Re4nQzy0/view?usp=drive_link",
-    summary:
-      "https://drive.google.com/file/d/1RuvUfTvUWNnK7KnD3YdH4S_xRwVrxKIa/view?usp=drive_link",
     tag: "HLP safeguarding",
+    reports:
+      "https://drive.google.com/file/d/1PV513ZaEoOpA8DGJCJYhOg4WUhv_zAcE/view?usp=sharing",
+    trainings:
+      "https://drive.google.com/file/d/1VDmaH9oY__fRE1eCKRut2rQ4VdJ8h-Sp/view?usp=sharing",
+    communication:
+      "https://drive.google.com/file/d/1hoXh2WTJFQfMMfAH8QrJK5sEL2iyylGQ/view?usp=sharing",
+    summary:
+      "https://drive.google.com/drive/folders/1QKMYE4uTQ1Q-NSwddbhYYIVKVS_AJ6Vc?usp=sharing",
   },
   {
     logo: "https://i.imgur.com/bEIBChu.png",
     title: "IYD",
     website: "https://iydrelief.org/",
-    reports:
-      "https://drive.google.com/file/d/1J0eKYhhZZaYY9lulee3pDpg-g82vtqsR/view?usp=drive_link",
-    trainings:
-      "https://drive.google.com/file/d/1wIAInROk5iLP4lifRiRm6x9_Wr4QuKy0/view?usp=drive_link",
-    communication:
-      "https://drive.google.com/file/d/1chfvXOC4NJywy61qysvPyxX-Re4nQzy0/view?usp=drive_link",
-    summary:
-      "https://drive.google.com/file/d/1RuvUfTvUWNnK7KnD3YdH4S_xRwVrxKIa/view?usp=drive_link",
     tag: "Checklist, food provision",
+    reports:
+      "https://drive.google.com/file/d/1PVQDck_CElko_Cwb_0FyvyJtTeoPrWau/view?usp=sharing",
+    trainings:
+      "https://drive.google.com/file/d/1USYOmGd1-53X9M417KY46oyUZDa2umzZ/view?usp=sharing",
+    communication:
+      "https://drive.google.com/file/d/1UQtn24mSxZDp5AmVctJ3XL8serkEsuUu/view?usp=sharing",
+    summary:
+      "https://drive.google.com/file/d/1VJpL6F5ZbEoEv41oHonECV0rkX4VBvFR/view?usp=sharing",
   },
   {
     logo: "https://i.imgur.com/UNTC42w.jpg",
     title: "LDHR",
     website: "https://www.legal-sy.org/",
-    reports:
-      "https://drive.google.com/file/d/1vca_j2Cy-vrw19XvfoMIEW1Rquy4VVah/view?usp=drive_link",
-    trainings:
-      "https://docs.google.com/presentation/d/1t1HW94cxjq7jt6wCMVteanUE3xzSBJnJ/edit?usp=drive_link&ouid=108569260090502725033&rtpof=true&sd=true",
-    communication:
-      "https://drive.google.com/file/d/1nceAloKVuAansNqMrUq9pEFjPaE6Ttur/view?usp=drive_link",
-    summary:
-      "https://drive.google.com/file/d/1HCQkzCAnYfMz1qU51qeHqakUGRXfOroC/view?usp=drive_link",
     tag: "Stigma",
+    reports:
+      "https://drive.google.com/file/d/1PLr8dpToEbyDSh5EMi-D9Qqr8yJyYM1S/view?usp=sharing",
+    trainings:
+      "https://drive.google.com/file/d/1U21UV7IbzFbc6tP7f7ig_gCBGgbHNqtQ/view?usp=sharing",
+    communication:
+      "https://docs.google.com/presentation/d/1SoeE648t5AYDrNHQNVMIDNfsHW--FW68/edit?usp=sharing&ouid=118334322170421131347&rtpof=true&sd=true",
+    summary:
+      "https://drive.google.com/file/d/1Tw62a_pXFctdlRJYpN-tepaet2Ufw8kD/view?usp=sharing",
   },
   {
     logo: "https://i.imgur.com/UNTC42w.jpg",
     title: "LDHR",
     website: "https://www.legal-sy.org/",
-    reports:
-      "https://drive.google.com/file/d/1vca_j2Cy-vrw19XvfoMIEW1Rquy4VVah/view?usp=drive_link",
-    trainings:
-      "https://docs.google.com/presentation/d/1t1HW94cxjq7jt6wCMVteanUE3xzSBJnJ/edit?usp=drive_link&ouid=108569260090502725033&rtpof=true&sd=true",
-    communication:
-      "https://drive.google.com/file/d/1nceAloKVuAansNqMrUq9pEFjPaE6Ttur/view?usp=drive_link",
-    summary:
-      "https://drive.google.com/file/d/1HCQkzCAnYfMz1qU51qeHqakUGRXfOroC/view?usp=drive_link",
     tag: "ex-detainees",
+    reports:
+      "https://drive.google.com/file/d/1PQAO5J-JcnST7VdVruTc4bO4MZfh3H2_/view?usp=sharing",
+    trainings:
+      "https://drive.google.com/file/d/1UBhuo_9UwfzPOuLkPpOeEV-4BnUwXmZd/view?usp=sharing",
+    communication:
+      "https://docs.google.com/presentation/d/1U6hoXm_1R_adVCgpJu3Yw7doIVALF1yk/edit?usp=sharing&ouid=118334322170421131347&rtpof=true&sd=true",
+    summary:
+      "https://drive.google.com/file/d/1U4iyMpooJczaniIRDjsotkmU6VC0wBIg/view?usp=sharing",
   },
   {
     logo: "https://i.imgur.com/03xnOoG.jpg",
     title: "SRD",
     website: "https://srd.org.tr/",
-    reports:
-      "https://drive.google.com/file/d/1zbuF5oZ0hLsln4txz06-y7O1l9jzpw0c/view?usp=drive_link",
-    trainings:
-      "https://drive.google.com/file/d/18f6ufe42MzRvWnwy2DQsht8ybusTokJf/view?usp=drive_link",
-    communication:
-      "https://drive.google.com/file/d/1WkLijZsMZ57Qg1R-E13Jfqq220AbS1vJ/view?usp=drive_link",
-    summary:
-      "https://drive.google.com/file/d/1lWS_Ofsd94pc0NRrxJpFnXbytjmaUoji/view?usp=drive_link",
     tag: "Amal Initiative",
+    reports:
+      "https://drive.google.com/file/d/1Q6Lpd5sgHdxejR99XHaYN0ABROuIRi0W/view?usp=sharing",
+    trainings:
+      "https://drive.google.com/file/d/1UOpGdbrKiJXz-WTfrG020e_B8AQ7eWVz/view?usp=sharing",
+    communication:
+      "https://drive.google.com/file/d/1UO2wmBgPJEw201GaZfXbOA3B2TRLwVrR/view?usp=sharing",
+    summary:
+      "https://drive.google.com/drive/folders/1SmSQouN9f2niVgYw7F-ckiSJ1iuh1DUj?usp=sharing",
   },
   {
     logo: "https://i.imgur.com/bZWaXVl.jpeg",
     title: "SEMA",
     website: "https://www.sema-sy.org/",
-    reports:
-      "https://drive.google.com/file/d/1GT-IaCf6uqMuR9ENya4KlzTC1xcloHyd/view?usp=drive_link",
-    trainings:
-      "https://drive.google.com/file/d/1BFL3DzM2RiyW3-V92L5HZe4vybOvXkfx/view?usp=drive_link",
-    communication:
-      "https://drive.google.com/file/d/10W7qgeDfwL3UGDCatMnsywttNHXUFPX1/view?usp=drive_link",
-    summary:
-      "https://drive.google.com/file/d/1zDzNE2bN3oIUSS5_v6-rfCjxk9MOHH-S/view?usp=drive_link",
     tag: "survivors trafficking",
+    reports:
+      "https://drive.google.com/file/d/1QIbMmpKhS6-j-_7Je81cJnsrQTw9Rkk-/view?usp=sharing",
+    trainings:
+      "https://drive.google.com/file/d/1VYNX1dJwYJVP1oNKyMohhPZInG1I-Iot/view?usp=sharing",
+    communication:
+      "https://drive.google.com/file/d/1Vh4vYT7NtDqrIdTUXcZbTDWiUC4lErGX/view?usp=sharing",
+    summary:
+      "https://drive.google.com/file/d/1Vlt3Fj3WRJ48Xpe8hcKwbDoday6ps1Q0/view?usp=sharing",
   },
   {
     logo: "https://i.imgur.com/l2Gvebg.jpg",
     title: "NAS",
     website: "https://nas.org.tr/",
-    reports:
-      "https://drive.google.com/file/d/1ZMTGU46sOJuLV6U1gga10CzsukdnRWl2/view?usp=drive_link",
-    trainings:
-      "https://drive.google.com/file/d/15R4UE8bkS2JLpR_ZNla4Jy4BRPWdjjPW/view?usp=drive_link",
-    communication:
-      "https://drive.google.com/file/d/1JOYNu0uej22lz1OyyY1xmwmQKVr90rzQ/view?usp=drive_link",
-    summary:
-      "https://drive.google.com/file/d/1b7OTgX2IxlZ7mS0fRZGZnxrkLRamFTnt/view?usp=drive_link",
     tag: "EORE",
+    reports:
+      "https://drive.google.com/file/d/1P4iRU_1eAC2bj19iYqJTWI3c0-vczo3T/view?usp=sharing",
+    trainings:
+      "https://drive.google.com/file/d/1Tvb4APWVc3VLVbdb8uQdUHz4C8Z8qqrv/view?usp=sharing",
+    communication:
+      "https://drive.google.com/file/d/1TuPNV2EMzwYaw_PXMDL6Bdh_nvT3brJd/view?usp=sharing",
+    summary:
+      "https://drive.google.com/file/d/1TnigldmpOtOj_i2PFi6xlhTq6yCFoadR/view?usp=sharing",
   },
-
   {
     logo: "https://i.imgur.com/KJYek68.png",
     title: "SHF",
     website: "www.partner-website.org",
-    reports:
-      "https://docs.google.com/document/d/1h1KstuS1949r1m0vZ4wHJMjyzjnUllYW/edit?usp=drive_link&ouid=108569260090502725033&rtpof=true&sd=true",
-    trainings:
-      "https://docs.google.com/document/d/13EUdH94Plbq1A_SZl_X4wgzS-tvrPwXz/edit?usp=drive_link&ouid=108569260090502725033&rtpof=true&sd=true",
-    communication:
-      "https://drive.google.com/file/d/1HXA3_6nfy6vqRMUzkh6FvHgY8EZCjI6T/view?usp=drive_link",
-    summary:
-      "https://drive.google.com/file/d/1TtyFywAoBGYgL1p8GJQ99wXA7w5dMP8s/view?usp=drive_link",
     tag: "persons with disabilities",
+    reports:
+      "https://drive.google.com/file/d/1QDuvZSI96ZMDx8yey3QAHKQPu6K98qEL/view?usp=sharing",
+    trainings:
+      "https://drive.google.com/file/d/1VRfX4RVVoOPmUg9EaNR-hQrR7IqdXkaD/view?usp=sharing",
+    communication:
+      "https://drive.google.com/file/d/1VdqCikyz_5ODklsaCFb3ci7EZ_xxk83y/view?usp=sharing",
+    summary:
+      "https://drive.google.com/file/d/1Vd4wpWxupmzRXhPD8M_xf3NG0y54dWAw/view?usp=sharing",
   },
   {
     logo: "https://i.imgur.com/ib9ykM8.jpg",
     title: "ATAA",
     website: "www.partner-website.org",
+    tag: "PSS, children",
     reports:
-      "https://drive.google.com/file/d/1uknLGOfS3aQnV6PzanofW6XpISboDVHp/view?usp=drive_link",
+      "https://drive.google.com/file/d/1Q1oF-8t3JYFOGFiYhg2F2bF_M-Gc6D4K/view?usp=sharing",
     trainings:
-      "https://drive.google.com/file/d/18l7RhhR9rAvptm8OkK5FSXjeJaFEPWRS/view?usp=drive_link",
+      "https://drive.google.com/file/d/1V1nh7UOJjCYb2yYZI_JeExM0Phl-YmJ9/view?usp=sharing",
     communication:
-      "https://drive.google.com/file/d/1KjViWMYAcToTWRj559yRqozCdKHvz2hx/view?usp=drive_link",
+      "https://drive.google.com/file/d/1UsWng5P98F3_ZjVLFpqd4on9OLkHnO2t/view?usp=sharing",
     summary:
-      "https://drive.google.com/file/d/1-mnRk34tPEdIVE0A-b0jWE16vlzbbjwz/view?usp=drive_link",
-    tag: "PSS, children ",
+      "https://drive.google.com/file/d/1Uq5Poo-TWMIiIv-DeFv-VXdL9f-9cEg9/view?usp=sharing",
   },
-
   {
     logo: "https://i.imgur.com/qWVbUwP.jpg",
-    title: "AFH",
+    title: "Action For Humanity",
     website: "https://actionforhumanity.org/",
-    reports: "Reports",
-    trainings: "Training Materials",
-    communication: "Communication Pieces",
-    summary: "Pictures",
     tag: "mobile teams",
+    reports:
+      "https://drive.google.com/file/d/1eyIJtqiXoGzxRYP1sDGt5DmwDg3vmnft/view?usp=sharing",
+    trainings:
+      "https://drive.google.com/file/d/1fEVVup34hKC-XOiQ-HzMWAjeuAr4Uaaa/view?usp=sharing",
+    communication:
+      "https://drive.google.com/file/d/1f87GFKNh3aGvsyjKpgBsADW1GJ7Vr492/view?usp=sharing",
+    summary:
+      "https://drive.google.com/file/d/1fJPT_XEE_jGBV00KfjHaiNnVB3xXrrnE/view?usp=sharing",
   },
-
   {
     logo: "https://i.imgur.com/Yjc89MS.png",
     title: "HIHFAD",
     website: "www.partner-website.org",
-    reports:
-      "https://drive.google.com/file/d/1w40H36dkITiQMvDL3avyopEGaO_0c-JU/view?usp=drive_link",
-    trainings:
-      "https://drive.google.com/file/d/1ML2o3TSaeQv3YLcxGb14D_wCKuyFBzY_/view?usp=drive_link",
-    communication:
-      "https://docs.google.com/document/d/11F_H8gb-bAzfXZ1ai1N2rSdK5fjLYlSk/edit?usp=drive_link&ouid=108569260090502725033&rtpof=true&sd=true",
-    summary:
-      "https://drive.google.com/file/d/1zuNsJ-_YTeoJYr7YuuYiuILt5PGvgoAj/view?usp=drive_link",
     tag: "children with disabilities",
+    reports:
+      "https://drive.google.com/file/d/1PasyjSMI-ET46NOASB9TbiVP_nibae1q/view?usp=sharing",
+    trainings:
+      "https://drive.google.com/file/d/1Ulaw8G0zUvpDGYdTXbWxpzkfNwa81-8w/view?usp=sharing",
+    communication:
+      "https://drive.google.com/file/d/1UYdR9H5VMP2M5ddtIQBT195USSy6Je60/view?usp=sharing",
+    summary:
+      "https://drive.google.com/file/d/1UVTvj0jnwU_rVa3-WTTVhsR3JSE44Cr9/view?usp=sharing",
   },
   {
     logo: "https://i.imgur.com/MLSncN1.jpg",
     title: "BINAA",
-    website: "www.partner-website.org",
-    reports: "Reports",
-    trainings: "Training Materials",
-    communication: "Communication Pieces",
-    summary: "Pictures",
+    website: "https://www.binaadev.org/",
+    reports:
+      "https://drive.google.com/file/d/1fk6dol_8LxNWQQvbTNdghVGjE5D1LFO7/view?usp=sharing",
+    trainings:
+      "https://drive.google.com/file/d/1fiu1pwHGqlEc4hwObGxc6LlABATUQ6Ex/view?usp=sharing",
+    communication:
+      "https://docs.google.com/document/d/1fcCkpRRmTpm3KgCON3kWjxyoGMy0vPcO/edit?usp=sharing&ouid=118334322170421131347&rtpof=true&sd=true",
+    summary:
+      "https://drive.google.com/file/d/1fV5s5R6LkgsZV22jUGsQAGqK1BIWt_NT/view?usp=sharing",
     tag: "Intersectoral response to earthquake",
   },
 ];
