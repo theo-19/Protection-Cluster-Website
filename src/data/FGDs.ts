@@ -16,7 +16,7 @@ export const FGDs = [
   },
   {
     title: "Sub-Districts Focal Points",
-    link: "https://drive.google.com/file/d/1WSBuzMGxVRv-EI-y1Ouv2KSxkWO3siuW/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1WJh5NCY8JzUEFOqOGepWWKNQtJ-XLvb5/view?usp=sharing",
     logo: "https://i.imgur.com/CiyvdGU.jpg",
   },
   {
