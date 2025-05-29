@@ -169,7 +169,7 @@ export const submissions = [
     title: "NAS",
     logo: "https://i.imgur.com/l2Gvebg.jpg",
     website: "https://nas.org.tr/",
-    tag: "EORE",
+    tag: "Empowering communities on ERW",
     reports:
       "https://drive.google.com/file/d/1Tvb4APWVc3VLVbdb8uQdUHz4C8Z8qqrv/view?usp=sharing",
     trainings:
@@ -209,7 +209,7 @@ export const submissions = [
       "https://drive.google.com/file/d/1Q1oF-8t3JYFOGFiYhg2F2bF_M-Gc6D4K/view?usp=sharing",
   },
   {
-    title: "ACH",
+    title: "AFH",
     logo: "https://i.imgur.com/qWVbUwP.jpg",
     website: "https://actionforhumanity.org/",
     tag: "mobile teams",

@@ -105,26 +105,28 @@ function Submission({
         Summary
       </Button>
 
-      <Group grow spacing="xs" mt="xs">
-        <Button
-          size="sm"
-          variant="outline"
-          color="dark"
-          onClick={() => onReportClick(reports)}
-          style={{ fontWeight: 500, fontSize: 12 }}
-        >
-          Reports
-        </Button>
-        <Button
-          size="sm"
-          variant="outline"
-          color="dark"
-          onClick={() => onReportClick(trainings)}
-          style={{ fontWeight: 500, fontSize: 12 }}
-        >
-          Trainings
-        </Button>
-      </Group>
+      {reports?.trim() !== "" ? (
+        <Group grow spacing="xs" mt="xs">
+          <Button
+            size="sm"
+            variant="outline"
+            color="dark"
+            onClick={() => onReportClick(reports)}
+            style={{ fontWeight: 500, fontSize: 12 }}
+          >
+            Reports
+          </Button>
+          <Button
+            size="sm"
+            variant="outline"
+            color="dark"
+            onClick={() => onReportClick(trainings)}
+            style={{ fontWeight: 500, fontSize: 12 }}
+          >
+            Trainings
+          </Button>
+        </Group>
+      ) : null}
       <Button
         size="sm"
         variant="outline"
