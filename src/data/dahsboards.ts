@@ -1,6 +1,13 @@
 export const dashboards = [
   {
     category: "Protection",
+    name: "Protection Household Checklist for food assistance Dashboard	",
+    description: `This dashboard provides the finding for the NWS PC FLS checklist and the food assistance data from WFP.`,
+    publishedYear: "2025",
+    link: "https://app.powerbi.com/view?r=eyJrIjoiMjExYjg1MzMtZGY4MC00YzRjLThiZWEtNzVlNzIwNGJlMjBkIiwidCI6ImU1YzM3OTgxLTY2NjQtNDEzNC04YTBjLTY1NDNkMmFmODBiZSIsImMiOjh9",
+  },
+  {
+    category: "Protection",
     name: "Community Center Dashboard - Arabic - 2024",
     description: `Community center dashboard which provide the information of community centers in North-west Syria (In Arabic version) 2024`,
     publishedYear: "2024",
