@@ -4,13 +4,13 @@ export const submissions = [
     title: "BAHAR",
     website: "https://bahar.ngo/",
     reports:
-      "https://drive.google.com/drive/folders/1rsx0CataFF7aDKtlUUenblcxgfVGspsI?usp=sharing",
+      "https://drive.google.com/drive/folders/1iGUNA-HvWgNQHZeU12c0Hq49LPWi46Jf?usp=sharing",
     trainings:
-      "https://drive.google.com/drive/folders/1ZFFTyveqxMfxbRVTtwMTJnMTHCS8hqKe?usp=drive_link",
+      "https://drive.google.com/drive/folders/1iEmOlCk75eICxM6zFIzzgWQuf1pvXhCg?usp=sharing",
     communication:
       "https://drive.google.com/file/d/1RVc6_50H5gHO-vb14Yov1lUdNUXvvXSj/view?usp=sharing",
     summary:
-      "https://drive.google.com/file/d/1EaoJZ7LG11gDtnihEV03rn6xq5sUKROE/view?usp=drive_link",
+      "https://drive.google.com/file/d/1PnCdnkCM5r44yZFL_6fHtFSWwQg-vrvX/view?usp=sharing",
     tag: "Social cohesion",
   },
   {
@@ -32,8 +32,10 @@ export const submissions = [
     logo: "https://i.imgur.com/9tnCIwR.png",
     website: "https://www.ihsanrd.org/",
     tag: "Capacity building, GBV",
-    reports: "",
-    trainings: "",
+    reports:
+      "https://drive.google.com/file/d/1jdoVFta0jJ-DWZS3ahzNJtGszFsx0wA2/view?usp=sharing",
+    trainings:
+      "https://drive.google.com/file/d/1jh2Z3IdYC7BI8Al95bTHFCIYOf9VtUn7/view?usp=sharing",
     communication:
       "https://drive.google.com/file/d/1QiPqkjWfzYqwIAjjFNjBiaSj1gchqmBv/view?usp=sharing",
     summary:
