@@ -38,7 +38,7 @@ const HomePage = (): JSX.Element => {
         <HeroSection />
         <Container>
           <CoordinationImpactVideo
-            videoUrl="https://drive.google.com/file/d/1FEwMd0EwcOdNrmU-q9n2TK4qzYvH7rpM/preview"
+            videoUrl="https://www.youtube.com/embed/o2ibs1UpRhI"
             titleProps={titleProps}
             boxProps={boxProps}
           />
