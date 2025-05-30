@@ -242,7 +242,7 @@ export const submissions = [
     title: "BINAA",
     logo: "https://i.imgur.com/MLSncN1.jpg",
     website: "https://www.binaadev.org/",
-    tag: "Intersectoral response to earthquake related needs",
+    tag: "Intersectoral response to earthquake",
     reports:
       "https://drive.google.com/file/d/1fk6dol_8LxNWQQvbTNdghVGjE5D1LFO7/view?usp=sharing",
     trainings:
